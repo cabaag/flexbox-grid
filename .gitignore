@@ -1,1 +1,4 @@
 node_modules
+
+[branch "master"]
+excludesfile = +dist

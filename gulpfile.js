@@ -27,7 +27,7 @@ gulp.task('pug', function () {
 	console.log('['+ chalk.grey(getTime()) +'] Compiling \'' +chalk.cyan('pug') + '\'');
 	return gulp.src('./src/index.pug')
   .pipe(pug())
-  .pipe(gulp.dest('./dist/'))
+  .pipe(gulp.dest('./'))
   .pipe(connect.reload());
 });
 
