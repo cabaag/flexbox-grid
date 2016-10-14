@@ -3,13 +3,12 @@ Super powerful grid system
 
 
 ## Install
----
+
 **npm**
 
 ```npm i flexboxgrid --save```
 
 ## Fisrt step
----
 
 ```html
 <div class="row">

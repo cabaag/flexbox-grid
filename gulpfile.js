@@ -18,7 +18,7 @@ var getTime = function() {
 
 gulp.task('connect', function() {
 	connect.server({
-		root: 'dist',
+		root: '',
 		livereload: true
 	});
 });
