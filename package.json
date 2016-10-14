@@ -2,7 +2,7 @@
   "name": "flexbox-grid",
   "version": "1.0.0",
   "description": "CSS3 Flexbox grid ",
-  "main": "index.js",
+  "main": "dist/flexbox.min.css",
   "scripts": {
     "start": "gulp",
     "test": "echo \"Error: no test specified\" && exit 1"

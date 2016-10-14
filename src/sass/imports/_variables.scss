@@ -7,8 +7,8 @@ $lg-break: 75rem;
 
 @if $pixels_units{
   @debug "$pixels_units is #{$pixels_units}";
-  $xs-break: 600px;
-  $sm-break: 960px;
-  $md-break: 1280px;
-  $lg-break: 1920px;
+  $xs-break: 480px;
+  $sm-break: 768px;
+  $md-break: 992px;
+  $lg-break: 1200px;
 }
