@@ -1,0 +1,32 @@
+@import 'queries';
+
+// Show and hide classes
+$sizes: (
+  xs: $xs-screen,
+  xs-and-up: $xs-screen-and-up,
+  sm-and-down: $sm-screen-and-down,
+  sm: $sm-screen,
+  sm-and-up: $sm-screen-and-up,
+  md-and-down: $md-screen-and-down,
+  md: $md-screen,
+  md-and-up: $md-screen-and-up,
+  lg-and-down: $lg-screen-and-down,
+  lg: $lg-screen,
+  lg-and-up: $lg-screen-and-up);
+
+@each $name, $query in $sizes {
+  // Hidden by default, if media is equal then will show
+  .show-#{$name} {
+    display: none;
+    @media #{$query}{
+      display: flex;
+    }
+  }
+  // Showed by default, if media is equal then will hide
+  .hide-#{$name}{
+    display: flex;
+    @media #{$query}{
+      display: none;
+    }
+  }
+}

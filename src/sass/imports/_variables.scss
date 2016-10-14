@@ -1,0 +1,14 @@
+@import 'settings';
+
+$xs-break: 30rem;
+$sm-break: 48rem;
+$md-break: 64rem;
+$lg-break: 75rem;
+
+@if $pixels_units{
+  @debug "$pixels_units is #{$pixels_units}";
+  $xs-break: 600px;
+  $sm-break: 960px;
+  $md-break: 1280px;
+  $lg-break: 1920px;
+}
