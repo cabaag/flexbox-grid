@@ -1,0 +1,30 @@
+section.responsive.row.middle-xs
+  .container
+    .row: .col.xs-12
+      h1.bold Responsive
+      h4.
+        The system was build to response to different sizes in which includes the columns,
+        offsets, alignment, distribution, show and hide for xs, sm, md and lg sizes.
+        The grid scales up to 12 columns to dispose as device or viewport increase.
+      .example.row: .col.xs-12
+        .row
+          .col.xs-3.sm-8.md-3: .box
+          .col.xs-9.sm-4.md-6: .box
+          .col.xs-12.sm-12.md-3: .box
+        .row
+          .col.xs-2.sm-4.md-3: .box
+          .col.xs-2.sm-4.md-2: .box
+          .col.xs-2.sm-4.md-1: .box
+          .col.xs-2.sm-4.md-1: .box
+          .col.xs-2.sm-4.md-2: .box
+          .col.xs-2.sm-4.md-3: .box          
+        .row
+          .col.xs-4.sm-8.md-6: .box
+          .col.xs-8.sm-4.md-6: .box
+      .code.row: .col.xs-12
+        pre(contenteditable="true").
+          &lt;div class='row'&gt;
+            &lt;div class='xs-12 sm-4 md-6 lg-8'&gt;
+              &lt;div class='box'&gt;Responsive&lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;

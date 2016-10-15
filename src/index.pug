@@ -11,10 +11,16 @@ html
     link(rel='stylesheet' type='text/css' href='./dist/css/styles.css')
 
   body
-    header: .container
-      .main.row.center-xs.middle-xs: .col.xs-12 
-        .title.center.bold Flexbox Grid
-        .subtitle.center Super powerful flex grid system
-    
+    include views/header
     include views/sandbox
+    include views/responsive
+    include views/fluid
+    include views/offsets
+    include views/width
+    include views/nested
+    include views/alignment
+    include views/distribution
+    include views/order
+    include views/show
+    include views/units
     script(src='./dist/js/main.js')

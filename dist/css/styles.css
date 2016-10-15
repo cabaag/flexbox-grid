@@ -1,3 +1,13 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  color: #2c3e50; }
+  body section {
+    padding: 50px 0;
+    background-color: #bdc3c7;
+    box-sizing: border-box; }
+  body h1 {
+    color: #27ae60; }
+
 .bold {
   font-weight: bold; }
 
@@ -23,7 +33,7 @@ header {
     padding: 10px;
     box-shadow: 0px 1px 4px #2c3e50; }
   .sandbox .sandbox-container .box0 {
-    background: #1abc9c; }
+    background: #27ae60; }
   .sandbox .sandbox-container .box1 {
     background: #9b59b6; }
   .sandbox .sandbox-container .box2 {
@@ -33,11 +43,18 @@ header {
   padding: 1rem 0;
   box-sizing: border-box; }
 
-body {
-  font-family: 'Roboto', sans-serif;
-  color: #2c3e50; }
-  body section {
-    padding: 50px 0;
-    height: 100vh;
-    background-color: #bdc3c7;
-    box-sizing: border-box; }
+.example .box {
+  padding: 1rem;
+  margin: 1rem;
+  background: #27ae60; }
+
+.code {
+  border-radius: 3px;
+  box-sizing: border-box;
+  box-shadow: 0px 3px 8px #2c3e50;
+  overflow: hidden;
+  background-color: #ecf0f1;
+  min-height: 100px;
+  margin: 20px 0;
+  padding: 0 16px;
+  color: #27ae60; }
