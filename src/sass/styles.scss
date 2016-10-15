@@ -1,3 +1,8 @@
+$primary-color: #2c3e50;
+$secondary-color: #1abc9c;
+$color1: #9b59b6;
+$color2: #3498db;
+$background-color: #ecf0f1;
 .bold {
   font-weight: bold;
 }
@@ -5,10 +10,53 @@
 .title {
   font-size: 6rem;
 }
+
 .subtitle {
-  font-size: 1.8rem;  
+  font-size: 1.8rem;
 }
 
 header {
-  height: 300px;
+  background-color: $background-color;
+  .main {
+    height: 100vh;
+  }
+}
+
+.sandbox {
+  .sandbox-container {
+    border-radius: 3px;
+    box-sizing: border-box;
+    box-shadow: 0px 3px 8px $primary-color;
+    height: 128px;
+    overflow: hidden;
+    background-color: $background-color;
+    .box{
+      padding: 10px;
+      box-shadow: 0px 1px 4px $primary-color;
+    }
+    .box0 {
+      background: $secondary-color;
+    }
+    .box1 {
+      background: $color1;
+    }
+    .box2 {
+      background: $color2;
+    }
+  }
+  .controls {
+    padding: 1rem 0;
+    box-sizing: border-box;
+  }
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  color: $primary-color;
+  section {
+    padding: 50px 0;
+    height: 100vh;
+    background-color: #bdc3c7;
+    box-sizing: border-box;
+  }
 }

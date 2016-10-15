@@ -1,16 +1,20 @@
 doctype html
 html
   head
-    meta(charset="utf-8")
+    meta(charset='utf-8')
     title Flexbox Grid
     
-    meta(name="viewport" content="width=device-width, initial-scale=1")
-    link(rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen")
-    link(rel="stylesheet" type="text/css" href="./dist/css/flexbox.css")
-    link(rel="stylesheet" type="text/css" href="./dist/css/styles.css")
+    meta(name='viewport' content='width=device-width, initial-scale=1')
+    link(rel='stylesheet' type='text/css' href='stylesheets/normalize.css' media='screen')
+    link(href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet')
+    link(rel='stylesheet' type='text/css' href='./dist/css/flexbox.css')
+    link(rel='stylesheet' type='text/css' href='./dist/css/styles.css')
 
   body
-    .container
-      header.row: .col.xs-12 
+    header: .container
+      .main.row.center-xs.middle-xs: .col.xs-12 
         .title.center.bold Flexbox Grid
         .subtitle.center Super powerful flex grid system
+    
+    include views/sandbox
+    script(src='./dist/js/main.js')

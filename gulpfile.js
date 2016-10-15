@@ -1,4 +1,5 @@
 var gulp = require('gulp');
+var gutil = require('gulp-util');
 var chalk = require('chalk');
 var rename = require('gulp-rename');
 
@@ -26,7 +27,7 @@ gulp.task('connect', function() {
 gulp.task('pug', function () {
 	console.log('['+ chalk.grey(getTime()) +'] Compiling \'' +chalk.cyan('pug') + '\'');
 	return gulp.src('./src/index.pug')
-  .pipe(pug())
+  .pipe(pug().on('error', gutil.log))
   .pipe(gulp.dest('./'))
   .pipe(connect.reload());
 });
