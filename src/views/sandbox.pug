@@ -1,58 +1,60 @@
-section.sandbox.row.middle-xs
+section.sandbox
   .container
     .row: .col.xs-12
       h1.bold Sandbox
       h4 Enjoy the power of flexbox
     
-    .sandbox-container.row.top-xs.start-xs
-      .box.box0
-      .box.box1
-      .box.box2
+    .row: .col
+      .sandbox-container.top-xs.start-xs.row
+        .box.box0
+        .box.box1
+        .box.box2
     .controls.row.around-xs
-      .col.start-xs
-        h4 Direction
-        form
-        input(type='radio' name='direction' onchange='setDirection("row")' value='row' checked)
-        | Row
+      .col.xs-12.sm-4.start-xs
+        .title.center-xs Direction
+        form.md-offset-3
+          input(type='radio' name='direction' onchange='setDirection("row")' value='row' checked)
+          span Row
+          br
+          input(type='radio' name='direction' onchange='setDirection("col")' value='col')
+          span Col
+          br
+          input(type='radio' name='direction' onchange='setDirection("row reverse")' value='row.reverse')
+          span Row reverse
+          br
+          input(type='radio' name='direction' onchange='setDirection("col reverse")' value='col.reverse')
+          span Column reverse
+          br
+      .col.xs-12.sm-4.start-xs
+        .title.center-xs Alignment
+        form.md-offset-3
+          input(type='radio' name='aligmnet' onchange='setAligment("top")' value='top' checked)
+          span Top
+          br
+          input(type='radio' name='aligmnet' onchange='setAligment("middle")' value='middle')
+          span Middle
+          br
+          input(type='radio' name='aligmnet' onchange='setAligment("bottom")' value='bottom')
+          span Bottom
+          br
+          input(type='radio' name='aligmnet' onchange='setAligment("stretch")' value='stretch')
+          span Stretch
         br
-        input(type='radio' name='direction' onchange='setDirection("col")' value='col')
-        | Column
-        br
-        input(type='radio' name='direction' onchange='setDirection("row reverse")' value='row.reverse' checked)
-        | Row reverse
-        br
-        input(type='radio' name='direction' onchange='setDirection("col reverse")' value='col.reverse')
-        | Column reverse
-        br
-      .col.start-xs
-        h4 Alignment
-        form
-        input(type='radio' name='aligmnet' onchange='setAligment("top")' value='top' checked)
-        | Top
-        br
-        input(type='radio' name='aligmnet' onchange='setAligment("middle")' value='middle')
-        | Middle
-        br
-        input(type='radio' name='aligmnet' onchange='setAligment("bottom")' value='bottom')
-        | Bottom
-        br
-        input(type='radio' name='aligmnet' onchange='setAligment("stretch")' value='stretch')
-        | Stretch
-        br
-      .col.start-xs
-        h4 Distribution
-        input(type='radio' name='distribution' onchange='setDistribution("start")' value='start' checked)
-        | Start
-        br
-        input(type='radio' name='distribution' onchange='setDistribution("center")' value='center')
-        | Center
-        br
-        input(type='radio' name='distribution' onchange='setDistribution("end")' value='end')
-        | End
-        br
-        input(type='radio' name='distribution' onchange='setDistribution("around")' value='around')
-        | Space around
-        br
-        input(type='radio' name='distribution' onchange='setDistribution("between")' value='between')
-        | Space between
-        br
+      .col.xs-12.sm-4.start-xs
+        .title.center-xs Distribution
+        form.md-offset-3
+          input(type='radio' name='distribution' onchange='setDistribution("start")' value='start' checked)
+          span Start
+          br
+          input(type='radio' name='distribution' onchange='setDistribution("center")' value='center')
+          span Center
+          br
+          input(type='radio' name='distribution' onchange='setDistribution("end")' value='end')
+          span End
+          br
+          input(type='radio' name='distribution' onchange='setDistribution("around")' value='around')
+          span Around
+          br
+          input(type='radio' name='distribution' onchange='setDistribution("between")' value='between')
+          span Between
+          br

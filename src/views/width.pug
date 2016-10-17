@@ -1,0 +1,23 @@
+section.width
+  .container
+    .row: .col.xs-12
+      h1.bold Custom width
+      h4.
+        The width can be automatic.
+    .example.row: .col.xs-12
+      .row
+        .col.xs-1: .box
+        .col: .box
+        .col.xs-1: .box
+      .row
+        .col: .box
+        .col: .box
+        .col: .box
+
+    .code.row: .col.xs-12
+        pre(contenteditable="true").
+          &lt;div class='row'&gt;
+            &lt;div class='col xs-2 xs-offset-2 md-4 md-offset-4'&gt;
+              &lt;div class='box'&gt;Offsets&lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;

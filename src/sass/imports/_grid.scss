@@ -1,27 +1,33 @@
 @import '_queries';
 
 .row {
-  box-sizing: border-box;
   display: flex;
   flex: 0 1 auto;
   flex-direction: row;
   flex-wrap: wrap;
+  margin: 0 -8px;
+  @media #{$sm-screen-and-up} {
+    margin-left: -8px;
+    margin-right: -8px;
+  }
+  box-sizing: border-box;
   &.reverse {
     flex-direction: row-reverse;
   }
   &.col {
     flex-direction: column;
+    margin: 0;
     &.reverse {
       flex-direction: column-reverse;
     }
   }
 }
 .col {
-  box-sizing: border-box;
-  flex: 0 0 auto;
-  flex-grow: 1;
-  flex-basis: 0;
+  flex: 1 0 0%;
   max-width: 100%;
+  padding-left: 8px;
+  padding-right: 8px;
+  box-sizing: border-box;
   &.reverse {
     flex-direction: column-reverse;
   }
@@ -31,7 +37,8 @@ $sizes: (
   xs: $xs-screen-and-up,
   sm: $sm-screen-and-up,
   md: $md-screen-and-up,
-  lg: $lg-screen-and-up
+  lg: $lg-screen-and-up,
+  xl: $xl-screen-and-up,
 );
 
 @each $size, $query in $sizes {
@@ -40,7 +47,6 @@ $sizes: (
       .#{$size}-#{$i},
       .#{$size}-offset-#{$i} {
         box-sizing: border-box;
-        flex: 0 0 auto;
       }
       .#{$size}-#{$i} {
         flex-basis: percentage($i / 12);

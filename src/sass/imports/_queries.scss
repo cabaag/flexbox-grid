@@ -1,7 +1,7 @@
 @import 'variables';
 
 $xs-screen: 'only screen and (max-width: #{$xs-break} )';
-$xs-screen-and-up: 'only screen and (min-width: 0px)'; 
+$xs-screen-and-up: 'only screen'; 
 
 $sm-screen-and-down: 'only screen and (max-width: #{$xs-break} )';
 $sm-screen: 'only screen and (min-width: #{$xs-break + 1}) and (max-width: #{$sm-break})';

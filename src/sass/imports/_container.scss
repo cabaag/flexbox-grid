@@ -4,13 +4,15 @@ $xs-container: 95%;
 $sm-container: 90%;
 $md-container: 80%;
 $lg-container: 75%;
+$xl-container: 70%;
 
 .container-fluid,
 .container {
   margin-right: auto;
   margin-left: auto;
-  padding: 0;
-  margin: 0 auto;
+  @media #{$sm-screen-and-up} {
+    padding: 0 8px;
+  }
 }
 
 .container {
@@ -23,6 +25,9 @@ $lg-container: 75%;
   }
   @media #{$lg-screen-and-up} {
     width: $lg-container;
+  }
+  @media #{$xl-screen-and-up} {
+    width: $xl-container;
   }
 }
 

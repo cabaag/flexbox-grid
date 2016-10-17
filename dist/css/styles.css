@@ -2,7 +2,7 @@ body {
   font-family: 'Roboto', sans-serif;
   color: #2c3e50; }
   body section {
-    padding: 50px 0;
+    padding: 16px 0;
     background-color: #bdc3c7;
     box-sizing: border-box; }
   body h1 {
@@ -12,7 +12,7 @@ body {
   font-weight: bold; }
 
 .title {
-  font-size: 6rem; }
+  font-size: 5rem; }
 
 .subtitle {
   font-size: 1.8rem; }
@@ -23,15 +23,13 @@ header {
     height: 100vh; }
 
 .sandbox .sandbox-container {
-  border-radius: 3px;
   box-sizing: border-box;
-  box-shadow: 0px 3px 8px #2c3e50;
   height: 128px;
   overflow: hidden;
-  background-color: #ecf0f1; }
+  background-color: #ecf0f1;
+  margin: 0 auto; }
   .sandbox .sandbox-container .box {
-    padding: 10px;
-    box-shadow: 0px 1px 4px #2c3e50; }
+    padding: 8px; }
   .sandbox .sandbox-container .box0 {
     background: #27ae60; }
   .sandbox .sandbox-container .box1 {
@@ -42,19 +40,71 @@ header {
 .sandbox .controls {
   padding: 1rem 0;
   box-sizing: border-box; }
+  .sandbox .controls .title {
+    font-size: 1rem;
+    margin: 0;
+    margin-top: 1rem; }
+
+.table-responsive {
+  width: 100%;
+  overflow-y: hidden; }
+
+table {
+  width: 100%;
+  max-width: 100%;
+  border: 1px solid #8aa4be;
+  background-color: #ecf0f1; }
+  table thead,
+  table tbody,
+  table tr,
+  table th,
+  table td {
+    border: inherit; }
+  table thead,
+  table td.bold {
+    background-color: #2c3e50;
+    color: #27ae60; }
+  table tr,
+  table th,
+  table td {
+    padding: 8px;
+    min-width: 120px; }
+  table .title {
+    font-size: 1rem; }
+  table .subtitle {
+    font-size: 0.7rem; }
+  table td pre {
+    margin: 0;
+    color: #27ae60; }
+  table .odd {
+    background-color: #ecf0f1; }
+  table .even {
+    background-color: #bdc3c7; }
 
 .example .box {
-  padding: 1rem;
-  margin: 1rem;
+  min-width: 20px;
+  min-height: 20px;
+  margin-bottom: 1rem;
   background: #27ae60; }
 
 .code {
   border-radius: 3px;
   box-sizing: border-box;
-  box-shadow: 0px 3px 8px #2c3e50;
   overflow: hidden;
   background-color: #ecf0f1;
   min-height: 100px;
   margin: 20px 0;
   padding: 0 16px;
   color: #27ae60; }
+
+.heart .border,
+.heart .content {
+  padding: 1rem 0;
+  margin: 0 -8px;
+  height: 20px; }
+
+.heart .border {
+  background: #27ae60; }
+
+.heart .content {
+  background: #e74c3c; }
