@@ -1,0 +1,88 @@
+@import 'queries';
+
+$sizes: ( 
+  xs: $xs-screen, 
+  gt-xs: $xs-screen-and-up, 
+  sm: $sm-screen, 
+  gt-sm: $sm-screen-and-up, 
+  md: $md-screen, 
+  gt-md: $md-screen-and-up, 
+  lg: $lg-screen, 
+  gt-lg: $lg-screen-and-up, 
+  xl: $xl-screen
+);
+
+$horizontal-alignment: (start: flex-start, center: center, end: flex-end, stretch: stretch);
+$vertical-alignment: (start: flex-start, center: center, end: flex-end, space-around: space-around, space-between: space-between);
+.layout-align {
+  align-items: stretch;
+  align-content: stretch;
+  justify-content: flex-start;
+}
+
+@each $name, $value in $sizes {
+  @media #{$value}{
+    .layout-align-#{$name} {
+      align-items: stretch;
+      align-content: stretch;
+      justify-content: flex-start;
+    }
+  }
+}
+
+@each $vertical-name, $vertical-value in $vertical-alignment {
+  .layout-align-#{$vertical-name} {
+    justify-content: $vertical-value;
+  }
+  @each $horizontal-name, $horizontal-value in $horizontal-alignment {
+    .layout-align-#{$vertical-name}-#{$horizontal-name} {
+      justify-content: $vertical-value;
+      align-items: $horizontal-value;
+      align-content: $horizontal-value;
+      @if ($horizontal-name=="center") {
+        max-width: 100%;
+        &>* {
+          box-sizing: border-box;
+          max-width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@each $size-name, $size-value in $sizes {
+  @media #{$size-value}{
+    @each $vertical-name, $vertical-value in $vertical-alignment {
+      .layout-align-#{$size-name}-#{$vertical-name} {
+        justify-content: $vertical-value;
+      }
+      @each $horizontal-name, $horizontal-value in $horizontal-alignment {
+        .layout-align-#{$size-name}-#{$vertical-name}-#{$horizontal-name} {
+          justify-content: $vertical-value;
+          align-items: $horizontal-value;
+          align-content: $horizontal-value;
+          @if ($horizontal-name=="center") {
+            max-width: 100%;
+            &>* {
+              box-sizing: border-box;
+              max-width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.center,
+.center-align {
+  text-align: center;
+}
+
+.left-align {
+  text-align: left;
+}
+
+.right-align {
+  text-align: right;
+}

@@ -1,14 +1,20 @@
 var gulp = require('gulp');
+var gutil = require('gulp-util');
 var chalk = require('chalk');
 var rename = require('gulp-rename');
 
 var connect = require('gulp-connect');
 
 var pug = require('gulp-pug');
-var sass = require('gulp-sass');
-var minifyCss = require ('gulp-minify-css');
 
-var getTime = function() {
+
+var postcss = require('gulp-postcss');
+var sass = require('gulp-sass');
+var minifyCss = require('gulp-minify-css');
+var autoprefixer = require('autoprefixer');
+var cssnano = require('cssnano');
+
+var getTime = function () {
 	let now = new Date();
 	let hour = now.getHours();
 	let minutes = now.getMinutes() > 9 ? now.getMinutes() : `0${now.getMinutes()}`;
@@ -16,43 +22,44 @@ var getTime = function() {
 	return `${hour}:${minutes}:${seconds}`;
 };
 
-gulp.task('connect', function() {
+gulp.task('connect', function () {
 	connect.server({
-		root: 'dist',
+		root: '',
 		livereload: true
 	});
 });
 
 gulp.task('pug', function () {
-	console.log('['+ chalk.grey(getTime()) +'] Compiling \'' +chalk.cyan('pug') + '\'');
+	console.log('[' + chalk.grey(getTime()) + '] Compiling \'' + chalk.cyan('pug') + '\'');
 	return gulp.src('./src/index.pug')
-  .pipe(pug())
-  .pipe(gulp.dest('./dist/'))
-  .pipe(connect.reload());
+		.pipe(pug().on('error', gutil.log))
+		.pipe(gulp.dest('./'))
+		.pipe(connect.reload());
 });
 
-gulp.task('sass', function () {
-	console.log('['+ chalk.grey(getTime()) +'] Compiling \'' +chalk.cyan('sass') + '\'');	
+gulp.task('postcss', function () {
+	console.log('[' + chalk.grey(getTime()) + '] Compiling \'' + chalk.cyan('postcss') + '\'');
 	return gulp.src('./src/sass/*.scss')
-    .pipe(sass().on('error', sass.logError))
-    .pipe(gulp.dest('./dist/css/'))
-		.pipe(minifyCss({keepSpecialComments: 0}))
+		.pipe(sass().on('error', sass.logError))
+		.pipe(postcss([autoprefixer]))
+		.pipe(gulp.dest('./dist/css/'))
+		.pipe(postcss([cssnano]))
 		.pipe(rename({extname: '.min.css'}))
-    .pipe(gulp.dest('./dist/css/'))		
+		.pipe(gulp.dest('./dist/css/'))
 		.pipe(connect.reload());
 });
 
 gulp.task('js', function () {
-	console.log('['+ chalk.grey(getTime()) +'] Compiling \'' +chalk.cyan('js') + '\'');	
+	console.log('[' + chalk.grey(getTime()) + '] Compiling \'' + chalk.cyan('js') + '\'');
 	return gulp.src('./src/js/*.js')
-    .pipe(gulp.dest('./dist/js/'))
+		.pipe(gulp.dest('./dist/js/'))
 		.pipe(connect.reload());
 });
 
 gulp.task('watch', function () {
 	gulp.watch(['./src/**/*.pug'], ['pug']);
-	gulp.watch(['./src/**/*.scss'], ['sass']);
+	gulp.watch(['./src/**/*.scss'], ['postcss']);
 	gulp.watch(['./src/**/*.js'], ['js']);
 });
 
-gulp.task('default', ['connect', 'pug', 'sass', 'js', 'watch']);
+gulp.task('default', ['connect', 'pug', 'postcss', 'js', 'watch']);

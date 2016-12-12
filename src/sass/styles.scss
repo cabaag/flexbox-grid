@@ -1,14 +1,201 @@
+@import 'imports/queries';
+$primary-color: #27ae60;
+$secondary-color: #2c3e50;
+$color1: #9b59b6;
+$color2: #3498db;
+$color3: #e74c3c;
+$background-color: #ecf0f1;
+body {
+  font-family: 'Roboto', sans-serif;
+  color: $secondary-color;
+  background-color: #bdc3c7;
+  section {
+    padding: 30px 0;
+    background-color: #bdc3c7;
+    box-sizing: border-box;
+    .header {
+      .title {
+        color: $primary-color;
+        font-size: 28px;
+        margin: 8px 0;
+      }
+      .subtitle {
+        font-size: 16px;
+        margin: 4px 0;
+      }
+    }
+    code {
+      color: $primary-color;
+      background-color: $background-color;
+      padding: 0 4px;
+    }
+  }
+}
+
 .bold {
   font-weight: bold;
 }
 
-.title {
-  font-size: 6rem;
-}
-.subtitle {
-  font-size: 1.8rem;  
+header {
+  background-color: $background-color;
+  height: 100vh;
+  .title {
+    font-size: 44px;
+  }.subtitle {
+    font-size: 22px;
+  }
 }
 
-header {
-  height: 300px;
+// Sansbox section
+.sandbox {
+  .sandbox-container {
+    box-sizing: border-box;
+    height: 128px;
+    overflow: hidden;
+    background-color: $background-color;
+    margin: 0 auto;
+    .box {
+      padding: 8px;
+      &>* {
+        display: inline;
+      }
+    }
+    .box0 {
+      background: $primary-color;
+    }
+    .box1 {
+      background: $color1;
+    }
+    .box2 {
+      background: $color2;
+    }
+  }
+  .controls {
+    box-sizing: border-box;
+    .title {
+      font-size: 1rem;
+      margin: 0;
+    }
+  }
+}
+
+// Option section
+.table-responsive {
+  width: 100%;
+  overflow-y: hidden;
+}
+
+table {
+  width: 100%;
+  max-width: 100%;
+  border: 1px solid lighten($secondary-color, 40);
+  background-color: $background-color;
+  thead,
+  tbody,
+  tr,
+  th,
+  td {
+    border: inherit;
+  }
+  thead,
+  td.bold {
+    // background-color: $secondary-color;
+    // color: $primary-color;
+    background-color: $secondary-color;
+    color: $primary-color;
+  }
+  tr,
+  th,
+  td {
+    padding: 8px;
+    min-width: 120px;
+  }
+  .title {
+    font-size: 14px;
+  }
+  .subtitle {
+    font-size: 10px;
+  }
+  td pre {
+    margin: 0;
+    color: $primary-color;
+    display: inline;
+  }
+  .odd {
+    background-color: $background-color;
+  }
+  .even {
+    background-color: #bdc3c7;
+  }
+}
+
+// Responsive section
+.example {
+  background-color: $secondary-color;
+  margin: 20px 0;  
+  .box {
+    min-width: 40px;
+    min-height: 40px;
+    background: $primary-color;
+    color: $background-color;
+    display: flex;
+    align-content: center;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    margin: 4px;
+    &>* {
+      display: inline;
+    }
+  }
+  &.level-1 {
+    background-color: darken($primary-color, 10) !important;
+  }
+  .level-2 {
+    background-color: darken($primary-color, 20);
+  }
+  .level-3 {
+    background-color: darken($primary-color, 30);
+  }
+  .level-1,
+  .level-2,
+  .level-3 {
+    margin: 8px;
+    padding: 8px;
+    .box {
+      display: flex;
+      color: $background-color;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+    }
+  }
+}
+
+.code {
+  box-sizing: border-box;
+  overflow: hidden;
+  background-color: $background-color;
+  min-height: 100px;
+  margin: 20px 0;
+  padding: 0 16px;
+  color: $primary-color;
+}
+
+// Offset section
+.heart {
+  margin: 16px 0;
+  .border,
+  .content {
+    padding: 1rem 0;
+    height: 16px;
+    margin: 0 -8px;
+  }
+  .border {
+    background: $primary-color;
+  }
+  .content {
+    background: $color3;
+  }
 }

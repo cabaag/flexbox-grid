@@ -1,23 +1,21 @@
 @import 'variables';
 
-$xs-screen: 'only screen and (max-width: #{$xs-break} )';
-$xs-screen-and-up: 'only screen and (min-width: 0px)'; 
+$xs-screen: 'only screen and (max-width: #{$xs-break - 1} )';
+$xs-screen-and-up: 'only screen and (min-width: #{$xs-break} )'; 
 
-$sm-screen-and-down: 'only screen and (max-width: #{$xs-break} )';
-$sm-screen: 'only screen and (min-width: #{$xs-break + 1}) and (max-width: #{$sm-break})';
-$sm-screen-and-up: 'only screen and (min-width: #{$xs-break + 1})';
+$sm-screen-and-down: 'only screen and (max-width: #{$xs-break - 1} )';
+$sm-screen: 'only screen and (min-width: #{$xs-break}) and (max-width: #{$sm-break - 1})';
+$sm-screen-and-up: 'only screen and (min-width: #{$sm-break})';
 
-$md-screen-and-down: 'only screen and (max-width: #{$sm-break})';
-$md-screen: 'only screen and (min-width: #{$sm-break + 1}) and (max-width: #{$md-break})';
-$md-screen-and-up: 'only screen and (min-width: #{$sm-break + 1})';
+$md-screen-and-down: 'only screen and (max-width: #{$sm-break - 1})';
+$md-screen: 'only screen and (min-width: #{$sm-break}) and (max-width: #{$md-break - 1})';
+$md-screen-and-up: 'only screen and (min-width: #{$md-break})';
 
-$lg-screen-and-down: 'only screen and (max-width: #{$md-break})';
-$lg-screen: 'only screen and (min-width: #{$md-break + 1}) and (max-width: #{$lg-break})';
-$lg-screen-and-up: 'only screen and (min-width: #{$md-break + 1})';
+$lg-screen-and-down: 'only screen and (max-width: #{$md-break - 1})';
+$lg-screen: 'only screen and (min-width: #{$md-break}) and (max-width: #{$lg-break - 1})';
+$lg-screen-and-up: 'only screen and (min-width: #{$lg-break})';
 
-$xl-screen-and-down: 'only screen and (max-width: #{$lg-break})';
-$xl-screen: 'only screen and (min-width: #{$lg-break + 1})';
-$xl-screen-and-up: 'only screen and (min-width: #{$lg-break + 1})';
+$xl-screen: 'only screen and (min-width: #{$lg-break})';
 
 $gutter-width: 1rem;
 $outer-margin: 2rem;

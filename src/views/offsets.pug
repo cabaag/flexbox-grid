@@ -1,0 +1,63 @@
+section.offsets
+  .container
+    .header
+      .title.bold Flex offsets
+      .subtitle.
+        Add the class <code>.flex-offset</code> to a layout's child element 
+        to set its offset percentage within the layout container.
+        Value must be multiples of 5, 33 or 66.
+
+    .example.layout-row.layout-padding
+      .flex.flex-offset-25: .box .flex.flex-offset-25
+      .flex-40.flex-order--1: .box .flex-40.flex-order--1
+    
+    .code.row: .col-xs-12
+        pre(contenteditable="true").
+          &lt;div class='layout-row layout-padding'&gt;
+            &lt;div class='flex flex-offset-25'&gt;
+              &lt;div class='box'&gt;.flex.flex-offset-25&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class='flex-40 flex-order--1'&gt;
+              &lt;div class='box'&gt;.flex-40.flex-order--1&lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          
+    .table-responsive: table
+        thead
+          tr
+            th
+              .title Offset
+            th
+              .title Breakpoint
+        tbody
+          tr.even
+            td flex-offset
+            td Default flex-offset can be override by other
+          tr.odd
+            td flex-offset-xs
+            td width < 600px
+          tr.even
+            td flex-offset-gt-xs
+            td width >= 600px
+          tr.odd
+            td flex-offset-sm
+            td 600px <= width < 960px 
+          tr.even
+            td flex-offset-gt-sm
+            td width >= 960px
+          tr.odd
+            td flex-offset-md
+            td 960px <= width < 1280px
+          tr.even
+            td flex-offset-gt-md
+            td width >= 1280px
+          tr.odd
+            td flex-offset-lg
+            td 1280px <= width < 1920px
+          tr.even
+            td flex-offset-gt-lg
+            td width >= 1920px
+          tr.odd
+            td flex-offset-xl
+            td width >= 1920px
+    
