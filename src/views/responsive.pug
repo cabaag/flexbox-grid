@@ -1,30 +1,70 @@
 section.responsive
   .container
-    .row: .col.xs-12
-      h1.bold Responsive
-      h4.
-        The system was build to response to different sizes in which includes the columns,
-        offsets, alignment, distribution, show and hide for xs, sm, md and lg sizes.
-        The grid scales up to 12 columns to dispose as device or viewport increase.
-      .example.row: .col.xs-12
-        .row
-          .col.xs-3.sm-8.md-3: .box
-          .col.xs-9.sm-4.md-6: .box
-          .col.xs-12.sm-12.md-3: .box
-        .row
-          .col.xs-2.sm-4.md-3: .box
-          .col.xs-2.sm-4.md-2: .box
-          .col.xs-2.sm-4.md-1: .box
-          .col.xs-2.sm-4.md-1: .box
-          .col.xs-2.sm-4.md-2: .box
-          .col.xs-2.sm-4.md-3: .box          
-        .row
-          .col.xs-4.sm-8.md-6: .box
-          .col.xs-8.sm-4.md-6: .box
-      .code.row: .col.xs-12
-        pre(contenteditable="true").
-          &lt;div class='row'&gt;
-            &lt;div class='xs-12 sm-4 md-6 lg-8'&gt;
-              &lt;div class='box'&gt;Responsive&lt;/div&gt;
-            &lt;/div&gt;
+    .header
+      .title.bold Responsive
+      .subtitle.
+        The system was build to response to different sizes in which includes the flex,
+        offsets, horizontal alignment, vertical alignment, show and hide for xs, sm, md, 
+        lg and xl sizes.
+    .example.layout-column
+      .layout-row.layout-wrap.layout-padding
+        .flex-xs-25.flex-sm-70.flex-gt-sm-25: .box
+        .flex-xs-75.flex-sm-30.flex-gt-sm-50: .box
+        .flex-xs-100.flex-sm-100.flex-gt-sm-25: .box
+
+      .layout-row.layout-wrap.layout-padding
+        .flex-33.flex-gt-md-20: .box
+        .flex-33.flex-gt-md-20: .box
+        .flex-33.flex-gt-md-10: .box
+        .flex-33.flex-gt-md-10: .box
+        .flex-33.flex-gt-md-20: .box
+        .flex-33.flex-gt-md-20: .box
+
+      .layout-row.layout-wrap.layout-padding
+        .flex-xs-25.flex-sm-75.flex-gt-sm-50: .box
+        .flex-xs-75.flex-sm-25.flex-gt-sm-50: .box
+    .code.row: .col-xs-12
+      pre(contenteditable="true").
+        &lt;div class='layout-row'&gt;
+          &lt;div class='flex-xs-100 flex-sm-50 flex-md-60 flex-80'&gt;
+            &lt;div class='box'&gt;Responsive&lt;/div&gt;
           &lt;/div&gt;
+        &lt;/div&gt;
+    .table-responsive: table
+        thead
+          tr
+            th
+              .title Layout
+            th
+              .title Breakpoint
+        tbody
+          tr.even
+            td layout
+            td Default layout can be override by other
+          tr.odd
+            td layout-xs
+            td width < 600px
+          tr.even
+            td layout-gt-xs
+            td width >= 600px
+          tr.odd
+            td layout-sm
+            td 600px <= width < 960px 
+          tr.even
+            td layout-gt-sm
+            td width >= 960px
+          tr.odd
+            td layout-md
+            td 960px <= width < 1280px
+          tr.even
+            td layout-gt-md
+            td width >= 1280px
+          tr.odd
+            td layout-lg
+            td 1280px <= width < 1920px
+          tr.even
+            td layout-gt-lg
+            td width >= 1920px
+          tr.odd
+            td layout-xl
+            td width >= 1920px

@@ -1,9 +1,8 @@
 section.options
   .container
-    .row: .col.xs-12
-      h1.bold Options
-      h4.
-        Grid behaviour.
+    .header
+      .title.bold Options
+      .subtitle Layout behaviour.
     .table-responsive: table
       thead
         tr
@@ -23,46 +22,37 @@ section.options
           th
             .title Large devices
             .subtitle Desktop
-            .subtitle (&ge;64rem or &ge; 992px)
+            .subtitle (&ge;64rem or &ge; 1024px)
           th
             .title Extra Large devices
             .subtitle Tv
             .subtitle (&ge;75rem or &ge; 1200px)
       tbody
-        tr.odd
-          td.bold # of columns
-          td(colspan=4) 12
         tr.even
-          td.bold Container width
+          td.title.bold Container width
           td 95%
-          td 90%
           td 80%
           td 75%
           td 70%
-          
+          td 65%
         tr.odd
-          td.bold Class prefix
-          td: pre .xs-*
-          td: pre .sm-*
-          td: pre .md-*
-          td: pre .lg-*
-          td: pre .xl-*
-        
+          td.title.bold Flex size
+          td(colspan=5) Multiples of 5, 33 or 66
         tr.even
-          td.bold Nestable
+          td.title.bold Nestable
           td(colspan=5) Yes
         tr.odd
-          td.bold Offsets
+          td.title.bold Offsets
           td(colspan=5) Yes
         tr.even
-          td.bold Ordering
+          td.title.bold Ordering
           td(colspan=5) Yes
         tr.odd
-          td.bold Alignment
-          td(colspan=5) Top, Middle, Bottom, Stretch
+          td.title.bold Vertical alignment
+          td(colspan=5) Start, Center, End, Stretch
         tr.even
-          td.bold Distribution
-          td(colspan=5) Start, Center, End, Space Around, Space Between
+          td.title.bold Horizontal alignment
+          td(colspan=5) Start, Center, End, Space around, Space between
         tr.odd
-          td.bold Show &amp; Hide
+          td.title.bold Show &amp; Hide
           td(colspan=5) Yes

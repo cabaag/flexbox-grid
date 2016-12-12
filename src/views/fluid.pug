@@ -1,17 +1,15 @@
 section.grid_size
   .container-fluid
-    .row: .col.xs-12
+    .row: .col-xs-12
       h1.bold Fluid
       h4.
         Converts the container into a full width container, just replace .container for .container-fluid
-        
-    
-    .code.row: .col.xs-12
+    .code.row: .col-xs-12
         pre(contenteditable="true").
           &lt;div class='container-fluid'&gt;
-            &lt;div class='row'&gt;
-              &lt;div class='col xs-12 sm-4 md-6 lg-8'&gt;
-                &lt;div class='box'&gt;Responsive&lt;/div&gt;
+            &lt;div class='layout-row'&gt;
+              &lt;div class='flex-xs-100 flex-sm-50 flex-md-60 flex-80'&gt;
+                &lt;div class='box'&gt;Container fluid&lt;/div&gt;
               &lt;/div&gt;
             &lt;/div&gt;
           &lt;/div&gt;

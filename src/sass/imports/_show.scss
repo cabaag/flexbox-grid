@@ -1,18 +1,18 @@
 @import 'queries';
 
 // Show and hide classes
-$sizes: (
-  xs: $xs-screen,
-  xs-and-up: $xs-screen-and-up,
-  sm-and-down: $sm-screen-and-down,
-  sm: $sm-screen,
-  sm-and-up: $sm-screen-and-up,
-  md-and-down: $md-screen-and-down,
-  md: $md-screen,
-  md-and-up: $md-screen-and-up,
-  lg-and-down: $lg-screen-and-down,
-  lg: $lg-screen,
-  lg-and-up: $lg-screen-and-up);
+$sizes: ( 
+  xs: $xs-screen, 
+  gt-xs: $xs-screen-and-up, 
+  sm: $sm-screen, 
+  gt-sm: $sm-screen-and-up, 
+  md: $md-screen, 
+  gt-md: $md-screen-and-up, 
+  lg: $lg-screen, 
+  gt-lg: $lg-screen-and-up, 
+  xl: $xl-screen
+);
+
 
 @each $name, $query in $sizes {
   // Hidden by default, if media is equal then will show

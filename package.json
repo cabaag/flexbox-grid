@@ -24,16 +24,21 @@
   },
   "homepage": "https://github.com/cabaag/flexbox-grid#readme",
   "devDependencies": {
+    "autoprefixer": "^6.5.3",
     "bower": "^1.7.9",
     "chalk": "^1.1.3",
+    "cssnano": "^3.8.2",
     "gulp": "^3.9.1",
     "gulp-connect": "^5.0.0",
     "gulp-live-server": "0.0.30",
     "gulp-minify-css": "^1.2.4",
+    "gulp-postcss": "^6.2.0",
     "gulp-pug": "^3.1.0",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^2.3.2",
     "gulp-util": "^3.0.7",
+    "postcss-flexboxfixer": "0.0.5",
+    "postcss-scss": "^0.4.0",
     "pug": "^2.0.0-beta6"
   }
 }

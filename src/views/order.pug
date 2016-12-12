@@ -1,0 +1,68 @@
+section.order
+  .container
+    .header
+      .title.bold Flex ordering
+      .subtitle.
+        Add the class <code>.flex-order</code> to reorder elements within
+        layout container. The values goes from -20 to 20.
+    .example.layout-row.layout-padding
+      .flex.flex-order--1: .box .flex-order--1
+      .flex.flex-order-4: .box .flex-order-4
+      .flex.flex-order-1: .box .flex-order-1
+      .flex.flex-order--3: .box .flex-order--3
+    
+    .code.row: .col-xs-12
+        pre(contenteditable="true").
+          &lt;div class='layout-row layout-padding'&gt;
+            &lt;div class='flex flex-order--1'&gt;
+              &lt;div class='box'&gt;.flex-order--1&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class='flex flex-order-4'&gt;
+              &lt;div class='box'&gt;.flex-order-4&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class='flex flex-order-1'&gt;
+              &lt;div class='box'&gt;.flex-order-1&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class='flex flex-order--3'&gt;
+              &lt;div class='box'&gt;.flex-order--3&lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          
+    .table-responsive: table
+        thead
+          tr
+            th
+              .title Order
+            th
+              .title Breakpoint
+        tbody
+          tr.even
+            td flex-order
+            td Default flex-order can be override by other
+          tr.odd
+            td flex-order-xs
+            td width < 600px
+          tr.even
+            td flex-order-gt-xs
+            td width >= 600px
+          tr.odd
+            td flex-order-sm
+            td 600px <= width < 960px 
+          tr.even
+            td flex-order-gt-sm
+            td width >= 960px
+          tr.odd
+            td flex-order-md
+            td 960px <= width < 1280px
+          tr.even
+            td flex-order-gt-md
+            td width >= 1280px
+          tr.odd
+            td flex-order-lg
+            td 1280px <= width < 1920px
+          tr.even
+            td flex-order-gt-lg
+            td width >= 1920px
+          tr.odd
+            td flex-order-xl
+            td width >= 1920px

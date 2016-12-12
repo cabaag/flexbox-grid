@@ -1,60 +1,64 @@
 section.sandbox
   .container
-    .row: .col.xs-12
-      h1.bold Sandbox
-      h4 Enjoy the power of flexbox
+    .header
+      .title.bold Sandbox
+      .subtitle Enjoy the power of flexbox
     
-    .row: .col
-      .sandbox-container.top-xs.start-xs.row
+    .flex
+      .sandbox-container.layout-row
         .box.box0
         .box.box1
         .box.box2
-    .controls.row.around-xs
-      .col.xs-12.sm-4.start-xs
-        .title.center-xs Direction
-        form.md-offset-3
+    .controls.layout-row.layout-wrap.layout-align-gt-xs-space-around.layout-padding
+      .flex.flex-xs-100
+        .title.layout-align-xs-center Direction
+        form
           input(type='radio' name='direction' onchange='setDirection("row")' value='row' checked)
           span Row
           br
           input(type='radio' name='direction' onchange='setDirection("col")' value='col')
-          span Col
+          span Column
           br
           input(type='radio' name='direction' onchange='setDirection("row reverse")' value='row.reverse')
           span Row reverse
           br
           input(type='radio' name='direction' onchange='setDirection("col reverse")' value='col.reverse')
           span Column reverse
+      .flex.flex-xs-100
+        .title.layout-align-xs-center Vertical Alignment
+        form
+          input(type='radio' name='vertical' onchange='setVertical("-start")' checked)
+          span None
           br
-      .col.xs-12.sm-4.start-xs
-        .title.center-xs Alignment
-        form.md-offset-3
-          input(type='radio' name='aligmnet' onchange='setAligment("top")' value='top' checked)
-          span Top
-          br
-          input(type='radio' name='aligmnet' onchange='setAligment("middle")' value='middle')
-          span Middle
-          br
-          input(type='radio' name='aligmnet' onchange='setAligment("bottom")' value='bottom')
-          span Bottom
-          br
-          input(type='radio' name='aligmnet' onchange='setAligment("stretch")' value='stretch')
-          span Stretch
-        br
-      .col.xs-12.sm-4.start-xs
-        .title.center-xs Distribution
-        form.md-offset-3
-          input(type='radio' name='distribution' onchange='setDistribution("start")' value='start' checked)
+          input(type='radio' name='vertical' onchange='setVertical("-start")')
           span Start
           br
-          input(type='radio' name='distribution' onchange='setDistribution("center")' value='center')
+          input(type='radio' name='vertical' onchange='setVertical("-center")')
           span Center
           br
-          input(type='radio' name='distribution' onchange='setDistribution("end")' value='end')
+          input(type='radio' name='vertical' onchange='setVertical("-end")')
           span End
           br
-          input(type='radio' name='distribution' onchange='setDistribution("around")' value='around')
-          span Around
+          input(type='radio' name='vertical' onchange='setVertical("-space-around")')
+          span Space around
           br
-          input(type='radio' name='distribution' onchange='setDistribution("between")' value='between')
-          span Between
+          input(type='radio' name='vertical' onchange='setVertical("-space-between")')
+          span Space between
+      .flex.flex-xs-100
+        .title.layout-align-xs-center Horizontal Alignment
+        form
+          input(type='radio' name='horizontal' onchange='setHorizontal("-stretch")' checked)
+          span None
           br
+          input(type='radio' name='horizontal' onchange='setHorizontal("-start")')
+          span Start
+          br
+          input(type='radio' name='horizontal' onchange='setHorizontal("-center")')
+          span Center
+          br
+          input(type='radio' name='horizontal' onchange='setHorizontal("-end")')
+          span End
+          br
+          input(type='radio' name='horizontal' onchange='setHorizontal("-stretch")')
+          span Stretch
+      
