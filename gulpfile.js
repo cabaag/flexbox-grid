@@ -1,20 +1,16 @@
-var gulp = require('gulp');
-var gutil = require('gulp-util');
-var chalk = require('chalk');
-var rename = require('gulp-rename');
+const gulp = require('gulp');
+const gutil = require('gulp-util');
+const chalk = require('chalk');
+const rename = require('gulp-rename');
 
-var connect = require('gulp-connect');
+const connect = require('gulp-connect');
 
-var pug = require('gulp-pug');
+const pug = require('gulp-pug');
 
+const postcss = require('gulp-postcss');
+const sass = require('gulp-sass');
 
-var postcss = require('gulp-postcss');
-var sass = require('gulp-sass');
-var minifyCss = require('gulp-minify-css');
-var autoprefixer = require('autoprefixer');
-var cssnano = require('cssnano');
-
-var getTime = function () {
+const getTime = function () {
 	let now = new Date();
 	let hour = now.getHours();
 	let minutes = now.getMinutes() > 9 ? now.getMinutes() : `0${now.getMinutes()}`;
@@ -41,9 +37,9 @@ gulp.task('postcss', function () {
 	console.log('[' + chalk.grey(getTime()) + '] Compiling \'' + chalk.cyan('postcss') + '\'');
 	return gulp.src('./src/sass/*.scss')
 		.pipe(sass().on('error', sass.logError))
-		.pipe(postcss([autoprefixer]))
+		.pipe(postcss([require('autoprefixer')]))
 		.pipe(gulp.dest('./dist/css/'))
-		.pipe(postcss([cssnano]))
+		.pipe(postcss([require('cssnano')]))
 		.pipe(rename({extname: '.min.css'}))
 		.pipe(gulp.dest('./dist/css/'))
 		.pipe(connect.reload());
