@@ -1,19 +1,18 @@
-# Flexbox Grid
-Super powerful grid system
-
+# Flexbox Layout
+Super powerful layout system
 
 ## Install
 
 **npm**
 
-```npm i flexboxgrid --save```
+```npm i flexboxlayout --save```
 
 ## Fisrt step
 
 ```html
-<div class="row">
-  <div class="col xs-6"> This will create a two col</div>
-  <div class="col xs-6"> row for mobile and up</div>
+<div class="layout-row">
+  <div class="flex-50"> This will create a two col</div>
+  <div class="flex-50"> row for mobile and up</div>
 </div>
 
 ```
