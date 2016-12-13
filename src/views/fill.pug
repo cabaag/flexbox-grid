@@ -1,0 +1,25 @@
+section#fill
+  .container
+    .header
+      .title.bold Fill
+      .subtitle.
+        The <code>.layout-fill</code> class forces the layout to
+        fill its parent container.
+    .example.layout-row.layout-wrap.layout-padding
+      .flex-30.layout-padding: .box .flex-30
+      .flex-30.layout-row.layout-padding: .box Unfilled layout
+      .layout-row.layout-fill.level-2.layout-padding: .box Filled layout
+
+    .code.row
+        pre(contenteditable="true").
+          &lt;div class="example layout-row layout-wrap layout-padding"&gt;
+            &lt;div class="flex-30 layout-padding"&gt;
+              &lt;div class="box"&gt;.flex-30&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="flex-30 layout-row layout-padding"&gt;
+              &lt;div class="box"&gt;Unfilled layout&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="layout-row layout-fill level-2 layout-padding"&gt;
+              &lt;div class="box"&gt;Filled layout&lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;

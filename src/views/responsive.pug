@@ -6,30 +6,7 @@ section.responsive
         The system was build to response to different sizes in which includes the flex,
         offsets, horizontal alignment, vertical alignment, show and hide for xs, sm, md, 
         lg and xl sizes.
-    .example.layout-column
-      .layout-row.layout-wrap.layout-padding
-        .flex-xs-25.flex-sm-70.flex-gt-sm-25: .box
-        .flex-xs-75.flex-sm-30.flex-gt-sm-50: .box
-        .flex-xs-100.flex-sm-100.flex-gt-sm-25: .box
-
-      .layout-row.layout-wrap.layout-padding
-        .flex-33.flex-gt-md-20: .box
-        .flex-33.flex-gt-md-20: .box
-        .flex-33.flex-gt-md-10: .box
-        .flex-33.flex-gt-md-10: .box
-        .flex-33.flex-gt-md-20: .box
-        .flex-33.flex-gt-md-20: .box
-
-      .layout-row.layout-wrap.layout-padding
-        .flex-xs-25.flex-sm-75.flex-gt-sm-50: .box
-        .flex-xs-75.flex-sm-25.flex-gt-sm-50: .box
-    .code.row: .col-xs-12
-      pre(contenteditable="true").
-        &lt;div class='layout-row'&gt;
-          &lt;div class='flex-xs-100 flex-sm-50 flex-md-60 flex-80'&gt;
-            &lt;div class='box'&gt;Responsive&lt;/div&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
+    
     .table-responsive: table
         thead
           tr
@@ -68,3 +45,65 @@ section.responsive
           tr.odd
             td layout-xl
             td width >= 1920px
+
+    .example.layout-column
+      .layout-row.layout-wrap
+        .flex-xs-25.flex-sm-70.flex-gt-sm-25: .box
+        .flex-xs-75.flex-sm-30.flex-gt-sm-50: .box
+        .flex-xs-100.flex-sm-100.flex-gt-sm-25: .box
+
+      .layout-row.layout-wrap
+        .flex-33.flex-gt-md-20: .box
+        .flex-33.flex-gt-md-20: .box
+        .flex-33.flex-gt-md-10: .box
+        .flex-33.flex-gt-md-10: .box
+        .flex-33.flex-gt-md-20: .box
+        .flex-33.flex-gt-md-20: .box
+
+      .layout-row.layout-wrap
+        .flex-xs-25.flex-sm-75.flex-gt-sm-50: .box
+        .flex-xs-75.flex-sm-25.flex-gt-sm-50: .box
+
+    .code.row
+      pre(contenteditable="true").
+        &lt;div class="example layout-column"&gt;
+          &lt;div class="layout-row layout-wrap"&gt;
+            &lt;div class="flex-xs-25 flex-sm-70 flex-gt-sm-25"&gt;
+              &lt;div class="box"&gt;&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="flex-xs-75 flex-sm-30 flex-gt-sm-50"&gt;
+              &lt;div class="box"&gt;&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="flex-xs-100 flex-sm-100 flex-gt-sm-25"&gt;
+              &lt;div class="box"&gt;&lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class="layout-row layout-wrap"&gt;
+            &lt;div class="flex-33 flex-gt-md-20"&gt;
+              &lt;div class="box"&gt;&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="flex-33 flex-gt-md-20"&gt;
+              &lt;div class="box"&gt;&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="flex-33 flex-gt-md-10"&gt;
+              &lt;div class="box"&gt;&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="flex-33 flex-gt-md-10"&gt;
+              &lt;div class="box"&gt;&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="flex-33 flex-gt-md-20"&gt;
+              &lt;div class="box"&gt;&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="flex-33 flex-gt-md-20"&gt;
+              &lt;div class="box"&gt;&lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class="layout-row layout-wrap"&gt;
+            &lt;div class="flex-xs-25 flex-sm-75 flex-gt-sm-50"&gt;
+              &lt;div class="box"&gt;&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="flex-xs-75 flex-sm-25 flex-gt-sm-50"&gt;
+              &lt;div class="box"&gt;&lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;

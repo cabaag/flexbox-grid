@@ -5,6 +5,20 @@ $color1: #9b59b6;
 $color2: #3498db;
 $color3: #e74c3c;
 $background-color: #ecf0f1;
+// Scrollbar style
+*::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+*::-webkit-scrollbar {
+  width: 5px;
+  background-color: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: rgba($secondary-color, 0.5);
+}
+
 body {
   font-family: 'Roboto', sans-serif;
   color: $secondary-color;
@@ -18,10 +32,12 @@ body {
         color: $primary-color;
         font-size: 28px;
         margin: 8px 0;
+        font-weight: bold;
       }
       .subtitle {
         font-size: 16px;
         margin: 4px 0;
+        margin-bottom: 20px;
       }
     }
     code {
@@ -30,10 +46,9 @@ body {
       padding: 0 4px;
     }
   }
-}
-
-.bold {
-  font-weight: bold;
+  .bold {
+    font-weight: bold;
+  }
 }
 
 header {
@@ -41,7 +56,8 @@ header {
   height: 100vh;
   .title {
     font-size: 44px;
-  }.subtitle {
+  }
+  .subtitle {
     font-size: 22px;
   }
 }
@@ -83,6 +99,7 @@ header {
 .table-responsive {
   width: 100%;
   overflow-y: hidden;
+  margin: 40px 0;
 }
 
 table {
@@ -131,8 +148,8 @@ table {
 
 // Responsive section
 .example {
-  background-color: $secondary-color;
-  margin: 20px 0;  
+  // background-color: $secondary-color;
+  margin: 30px 0;
   .box {
     min-width: 40px;
     min-height: 40px;
@@ -175,9 +192,10 @@ table {
 
 .code {
   box-sizing: border-box;
-  overflow: hidden;
+  overflow-x: hidden;
   background-color: $background-color;
   min-height: 100px;
+  max-height: 300px;
   margin: 20px 0;
   padding: 0 16px;
   color: $primary-color;
