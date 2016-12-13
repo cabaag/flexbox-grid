@@ -7,46 +7,6 @@ section.alignment
         indicates the horizontal alingment and the second indicates vertical alignment.
 
         If one word is passed it'kk works but only for horizontal alignment.
-    .example.layout-row.layout-wrap.layout-padding
-      .flex-40.layout-column.layout-align-center
-        .flex.layout-row.layout-align-space-around-center
-          .box
-          .box
-          .box
-        .flex.box
-        .flex.box
-      .flex-20.layout-column.layout-align-space-around-stretch
-        .flex-30.box
-        .flex-30.box
-      .flex-40.layout-row.layout-wrap.layout-align-end
-        .flex-30.box
-        .flex-30.box
-        .flex-70.box
-        .flex-30.box
-    
-    .code.row: .col-xs-12
-      pre(contenteditable="true").
-        &lt;div class="layout-row layout-wrap layout-padding"&gt;
-          &lt;div class="flex-40 layout-column layout-align-center"&gt;
-            &lt;div class="flex layout-row layout-align-space-around-center"&gt;
-              &lt;div class="box"&gt;&lt;/div&gt;
-              &lt;div class="box"&gt;&lt;/div&gt;
-              &lt;div class="box"&gt;&lt;/div&gt;
-            &lt;/div&gt;
-            &lt;div class="flex box"&gt;&lt;/div&gt;
-            &lt;div class="flex box"&gt;&lt;/div&gt;
-          &lt;/div&gt;
-          &lt;div class="flex-20 layout-column layout-align-space-around-stretch"&gt;
-            &lt;div class="flex-30 box"&gt;&lt;/div&gt;
-            &lt;div class="flex-30 box"&gt;&lt;/div&gt;
-          &lt;/div&gt;
-          &lt;div class="flex-40 layout-row layout-wrap layout-align-end"&gt;
-            &lt;div class="flex-30 box"&gt;&lt;/div&gt;
-            &lt;div class="flex-30 box"&gt;&lt;/div&gt;
-            &lt;div class="flex-70 box"&gt;&lt;/div&gt;
-            &lt;div class="flex-30 box"&gt;&lt;/div&gt;
-          &lt;/div&gt;
-        &lt;/div&gt;
 
     .table-responsive: table
         thead
@@ -86,3 +46,44 @@ section.alignment
           tr.odd
             td layout-align-xl
             td width >= 1920px
+            
+    .example.layout-row.layout-wrap
+      .flex-40.layout-column.layout-align-center
+        .flex.layout-row.layout-align-space-around-center
+          .box
+          .box
+          .box
+        .flex.box
+        .flex.box
+      .flex-20.layout-column.layout-align-space-around-stretch
+        .flex-30.box
+        .flex-30.box
+      .flex-40.layout-row.layout-wrap.layout-align-end
+        .flex-30.box
+        .flex-30.box
+        .flex-70.box
+        .flex-30.box
+    
+    .code.row
+      pre(contenteditable="true").
+        &lt;div class="layout-row layout-wrap"&gt;
+          &lt;div class="flex-40 layout-column layout-align-center"&gt;
+            &lt;div class="flex layout-row layout-align-space-around-center"&gt;
+              &lt;div class="box"&gt;&lt;/div&gt;
+              &lt;div class="box"&gt;&lt;/div&gt;
+              &lt;div class="box"&gt;&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class="flex box"&gt;&lt;/div&gt;
+            &lt;div class="flex box"&gt;&lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class="flex-20 layout-column layout-align-space-around-stretch"&gt;
+            &lt;div class="flex-30 box"&gt;&lt;/div&gt;
+            &lt;div class="flex-30 box"&gt;&lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class="flex-40 layout-row layout-wrap layout-align-end"&gt;
+            &lt;div class="flex-30 box"&gt;&lt;/div&gt;
+            &lt;div class="flex-30 box"&gt;&lt;/div&gt;
+            &lt;div class="flex-70 box"&gt;&lt;/div&gt;
+            &lt;div class="flex-30 box"&gt;&lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;

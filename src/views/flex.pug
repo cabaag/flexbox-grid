@@ -3,9 +3,9 @@ section.flex
     .header
       .title.bold Flex
       .subtitle.
-        The flex class added to a layout's child element will flex 
+        The <code>flex</code> class added to a layout's child element will flex 
         (grow or shrink) to fit the unused are by other elements.
-    .example.layout-row.layout-wrap.layout-padding
+    .example.layout-row.layout-wrap
       .flex-30: .box .flex-30
       .flex-45: .box .flex-45
       .flex-25: .box .flex-25
@@ -13,11 +13,38 @@ section.flex
       .flex-66: .box .flex-66
       .flex-50: .box .flex-50
       .flex: .box .flex
+    
+    .code.row
+      pre(contenteditable="true").
+        &lt;div class="layout-row layout-wrap"&gt;
+          &lt;div class="flex-30"&gt;
+            &lt;div class="box"&gt;.flex-30&lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class="flex-45"&gt;
+            &lt;div class="box"&gt;.flex-45&lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class="flex-25"&gt;
+            &lt;div class="box"&gt;.flex-25&lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class="flex-33"&gt;
+            &lt;div class="box"&gt;.flex-33&lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class="flex-66"&gt;
+            &lt;div class="box"&gt;.flex-66&lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class="flex-50"&gt;
+            &lt;div class="box"&gt;.flex-50&lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class="flex"&gt;
+            &lt;div class="box"&gt;.flex&lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+
     .header
       .title.bold Responsive flex
       .subtitle.
         The flex classes are responsive.
-    .layout-row.layout-wrap.example.layout-padding
+    .example.layout-row.layout-wrap
       .flex-xs-66.flex-33: .box flex 66% on mobile and 33% otherwise
       .flex-xs-33.flex-66: .box flex 33% on mobile and 66% otherwise
     .header
