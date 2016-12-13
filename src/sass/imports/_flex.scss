@@ -38,157 +38,96 @@ $flex: (
   }
 }
 
+@mixin set-size($size, $flex-size, $size-name: null) {
+  .layout-column>.flex-#{$size-name}-#{$flex-size} {
+    max-width: 100%;
+    max-height: $size;
+  }
+  .flex-#{$size-name}-#{$flex-size},
+  .layout-row>.flex-#{$size-name}-#{$flex-size} {
+    max-width: $size;
+    max-height: 100%;
+  }
+  .flex-#{$size-name}-#{$flex-size},
+  .layout-column>.flex-#{$size-name}-#{$flex-size},
+  .layout-row>.flex-#{$size-name}-#{$flex-size} {
+    flex: 1 1 $size;
+    box-sizing: border-box;
+  }
+  
+  .layout-#{$size-name}-column>.flex-#{$flex-size} {
+    max-width: 100%;
+    max-height: $size;
+  }
+  .layout-#{$size-name}-row>.flex-#{$flex-size} {
+    max-width: $size;
+    max-height: 100%;
+  }
+  .flex-#{$size-name}-#{$flex-size},
+  .layout-#{$size-name}-column>.flex-#{$flex-size},
+  .layout-#{$size-name}-row>.flex-#{$flex-size} {
+    flex: 1 1 $size;
+    box-sizing: border-box;
+  }
+
+  .layout-#{$size-name}-column>.flex-#{$size-name}-#{$flex-size} {
+    max-width: 100%;
+    max-height: $size;
+  }
+  .layout-#{$size-name}-row>.flex-#{$size-name}-#{$flex-size} {
+    max-width: $size;
+    max-height: 100%;
+  }
+  .flex-#{$size-name}-#{$flex-size},
+  .layout-#{$size-name}-column>.flex-#{$size-name}-#{$flex-size},
+  .layout-#{$size-name}-row>.flex-#{$size-name}-#{$flex-size} {
+    flex: 1 1 $size;
+    box-sizing: border-box;
+  }
+}
+
+@mixin set-size-default($size, $flex-size) {
+  .layout-column>.flex-#{$flex-size} {
+    max-width: 100%;
+    max-height: $size;
+  }
+  .flex-#{$flex-size},
+  .layout-row>.flex-#{$flex-size} {
+    max-width: $size;
+    max-height: 100%;
+  }
+  .layout-column>.flex-#{$flex-size},
+  .layout-row>.flex-#{$flex-size} {
+    flex: 1 1 $size;
+    box-sizing: border-box;
+  }
+}
+
 @each $size-name, $size-value in $sizes {
   @if($size-value != null){
     @media #{$size-value}{
       @for $i from 0 through 100 {
         @if($i % 5==0) {
-          .layout-column>.flex-#{$size-name}-#{$i} {
-            max-width: 100%;
-            max-height: (percentage($i) / 100);
-          }
-          .flex-#{$size-name}-#{$i},
-          .layout-row>.flex-#{$size-name}-#{$i} {
-            max-width: percentage($i) / 100;
-            max-height: 100%;
-          }
-          .flex-#{$size-name}-#{$i},
-          .layout-column>.flex-#{$size-name}-#{$i},
-          .layout-row>.flex-#{$size-name}-#{$i} {
-            flex: 1 1 (percentage($i) / 100);
-            box-sizing: border-box;
-          }
-
-          .layout-#{$size-name}-column>.flex-#{$size-name}-#{$i} {
-            max-width: 100%;
-            max-height: (percentage($i) / 100);
-          }
-          .layout-#{$size-name}-row>.flex-#{$size-name}-#{$i} {
-            max-width: percentage($i) / 100;
-            max-height: 100%;
-          }
-          .flex-#{$size-name}-#{$i},
-          .layout-#{$size-name}-column>.flex-#{$size-name}-#{$i},
-          .layout-#{$size-name}-row>.flex-#{$size-name}-#{$i} {
-            flex: 1 1 (percentage($i) / 100);
-            box-sizing: border-box;
-          }
+          @include set-size((percentage($i) / 100), $i, $size-name);
         }
         @if($i % 33==0) {
-          .layout-column>.flex-#{$size-name}-#{$i} {
-            max-width: 100%;
-            max-height: 33.33335%;
-          }
-          .flex-#{$size-name}-#{$i},
-          .layout-row>.flex-#{$size-name}-#{$i} {
-            max-width: percentage($i) / 100;
-            max-height: 100%;
-          }
-          .flex-#{$size-name}-#{$i},
-          .layout-column>.flex-#{$size-name}-#{$i},
-          .layout-row>.flex-#{$size-name}-#{$i} {
-            flex: 1 1 33.33335%;
-            box-sizing: border-box;
-          }
-
-          .layout-#{$size-name}-column>.flex-#{$size-name}-#{$i} {
-            max-width: 100%;
-            max-height: 33.33335%;
-          }
-          .layout-#{$size-name}-row>.flex-#{$size-name}-#{$i} {
-            max-width: 33.33335;
-            max-height: 100%;
-          }
-          .flex-#{$size-name}-#{$i},
-          .layout-#{$size-name}-column>.flex-#{$size-name}-#{$i},
-          .layout-#{$size-name}-row>.flex-#{$size-name}-#{$i} {
-            flex: 1 1 33.33335%;
-            box-sizing: border-box;
-          }
+          @include set-size(33.333335%, $i, $size-name);
         }
         @if($i % 66==0) {
-          .layout-column>.flex-#{$size-name}-#{$i} {
-            max-width: 100%;
-            max-height: 66.66665%;
-          }
-          .flex-#{$size-name}-#{$i},
-          .layout-row>.flex-#{$size-name}-#{$i} {
-            max-width: 66.6665%;
-            max-height: 100%;
-          }
-          .flex-#{$size-name}-#{$i},
-          .layout-column>.flex-#{$size-name}-#{$i},
-          .layout-row>.flex-#{$size-name}-#{$i} {
-            flex: 1 1 66.66665%;
-            box-sizing: border-box;
-          }
-
-          .layout-#{$size-name}-column>.flex-#{$size-name}-#{$i} {
-            max-width: 100%;
-            max-height: 66.66665%;
-          }
-          .layout-#{$size-name}-row>.flex-#{$size-name}-#{$i} {
-            max-width: percentage($i) / 100;
-            max-height: 100%;
-          }
-          .flex-#{$size-name}-#{$i},
-          .layout-#{$size-name}-column>.flex-#{$size-name}-#{$i},
-          .layout-#{$size-name}-row>.flex-#{$size-name}-#{$i} {
-            flex: 1 1 66.66665%;
-            box-sizing: border-box;
-          }
+          @include set-size(66.666665%, $i, $size-name);
         }
       }
     }
   }@else {
     @for $i from 0 through 100 {
       @if($i % 5==0) {
-        .layout-column>.flex-#{$i} {
-          max-width: 100%;
-          max-height: percentage($i) / 100;
-        }
-        .flex-#{$i},
-        .layout-row>.flex-#{$i} {
-          max-width: percentage($i) / 100;
-          max-height: 100%;
-        }
-        .layout-column>.flex-#{$i},
-        .layout-row>.flex-#{$i} {
-          flex: 1 1 (percentage($i) / 100);
-          box-sizing: border-box;
-        }
+        @include set-size-default((percentage($i) / 100), $i);        
       }
       @if($i % 33==0) {
-        .layout-column>.flex-#{$i} {
-          max-width: 100%;
-          max-height: 33.333335%;
-        }
-        .flex-#{$i},
-        .layout-row>.flex-#{$i} {
-          max-width: 33.333335%;
-          max-height: 100%;
-        }
-        .layout-column>.flex-#{$i},
-        .layout-row>.flex-#{$i} {
-          flex: 1 1 33.333335%;
-          box-sizing: border-box;
-        }
+        @include set-size-default(33.333335%, $i);
       }
       @if($i % 66==0) {
-        .layout-column>.flex-#{$i} {
-          max-width: 100%;
-          max-height: 66.66665%;
-        }
-        .flex-#{$i},
-        .layout-row>.flex-#{$i} {
-          max-width: 66.66665%;
-          max-height: 100%;
-        }
-        .layout-column>.flex-#{$i},
-        .layout-row>.flex-#{$i} {
-          flex: 1 1 66.66665%;
-          box-sizing: border-box;
-        }
+        @include set-size-default(66.666665%, $i);
       }
     }
     .layout-row> .flex {

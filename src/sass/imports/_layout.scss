@@ -32,6 +32,18 @@ $sizes: (
 .layout-column-reverse {
   flex-direction: column-reverse;
 }
+
+// Display none layouts, put before all to avoid override
+@each $name, $value in $sizes {
+  .layout-#{$name},
+  .layout-#{$name}-column,
+  .layout-#{$name}-row,
+  .layout-#{$name}-row-reverse,
+  .layout-#{$name}-column-reverse {
+    display: none;
+  }
+}
+
 @each $name, $value in $sizes {
   @media #{$value} {
     .layout-#{$name},
@@ -46,8 +58,15 @@ $sizes: (
     .layout-#{$name}-row {
       flex-direction: row;
     }
+    .layout-#{$name}-column-reverse {
+      flex-direction: column-reverse;
+    }
+    .layout-#{$name}-row-reverse {
+      flex-direction: row-reverse;
+    }
   }
 }
+
 .layout-fill {
   margin: 0;
   width: 100%;
