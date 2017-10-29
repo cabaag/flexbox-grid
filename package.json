@@ -1,7 +1,7 @@
 {
-  "name": "flexbox-grid",
+  "name": "flexbox-layout",
   "version": "1.0.0",
-  "description": "CSS3 Flexbox grid ",
+  "description": "CSS3 Flexbox layout",
   "main": "dist/css/flexbox.min.css",
   "scripts": {
     "start": "gulp",
