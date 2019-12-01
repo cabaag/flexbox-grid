@@ -3,62 +3,61 @@ section.sandbox
     .header
       .title.bold Sandbox
       .subtitle Enjoy the power of flexbox
-    
+
     .flex
-      .sandbox-container.layout-row
+      .sandbox-container.layout.row
         .box.box0
         .box.box1
         .box.box2
-    .controls.layout-row.layout-wrap.layout-align-gt-xs-space-around.layout-padding
+    .controls.layout.row.wrap.align-items-space-around.pt-4
       .flex.flex-xs-100
-        .title.layout-align-xs-center Direction
+        .title.mb-2 Direction
         form
           input(type='radio' name='direction' onchange='setDirection("row")' value='row' checked)
-          span Row
+          span  Row
           br
           input(type='radio' name='direction' onchange='setDirection("col")' value='col')
-          span Column
+          span  Column
           br
           input(type='radio' name='direction' onchange='setDirection("row reverse")' value='row.reverse')
-          span Row reverse
+          span  Row reverse
           br
           input(type='radio' name='direction' onchange='setDirection("col reverse")' value='col.reverse')
-          span Column reverse
+          span  Column reverse
       .flex.flex-xs-100
-        .title.layout-align-xs-center Vertical Alignment
+        .title.mb-2 Vertical Alignment
         form
           input(type='radio' name='vertical' onchange='setVertical("-start")' checked)
-          span None
+          span  None
           br
           input(type='radio' name='vertical' onchange='setVertical("-start")')
-          span Start
+          span  Start
           br
           input(type='radio' name='vertical' onchange='setVertical("-center")')
-          span Center
+          span  Center
           br
           input(type='radio' name='vertical' onchange='setVertical("-end")')
-          span End
+          span  End
           br
           input(type='radio' name='vertical' onchange='setVertical("-space-around")')
-          span Space around
+          span  Space around
           br
           input(type='radio' name='vertical' onchange='setVertical("-space-between")')
-          span Space between
+          span  Space between
       .flex.flex-xs-100
-        .title.layout-align-xs-center Horizontal Alignment
+        .title.mb-2 Horizontal Alignment
         form
           input(type='radio' name='horizontal' onchange='setHorizontal("-stretch")' checked)
-          span None
+          span  None
           br
           input(type='radio' name='horizontal' onchange='setHorizontal("-start")')
-          span Start
+          span  Start
           br
           input(type='radio' name='horizontal' onchange='setHorizontal("-center")')
-          span Center
+          span  Center
           br
           input(type='radio' name='horizontal' onchange='setHorizontal("-end")')
-          span End
+          span  End
           br
           input(type='radio' name='horizontal' onchange='setHorizontal("-stretch")')
-          span Stretch
-      
+          span  Stretch

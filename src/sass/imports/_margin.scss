@@ -1,41 +1,26 @@
-.layout-margin-sm>* {
-  margin: 4px;
+@import '_variables';
+
+// Direction padding
+@each $nspacing, $vspacing in $spacing {
+   @each $ndirection, $value in $direction {
+      .m#{$ndirection}-#{$nspacing} {
+         padding#{$value}: $vspacing;
+      }
+   }
+   .layout.row.spacing-#{$nspacing}:not(:last-child) > * {
+      margin-right: $vspacing;
+   }
+   .layout.column.spacing-#{$nspacing}:not(:last-child) > * {
+      margin-bottom: $vspacing;
+   }
 }
 
-.layout-margin {
-  >.flex-sm {
-    margin: 4px;
-  }
-  margin: 8px;
-}
-
-.layout-margin-gt-sm,
-.layout-margin-md {
-  margin: 8px;
-  >* {
-    margin: 8px;
-  }
-}
-
-.layout-margin> {
-  *,
-  .flex,
-  .flex-gt-sm,
-  .flex-md {
-    margin: 8px;
-  }
-}
-
-.layout-margin-gt-lg>*,
-.layout-margin-gt-md>*,
-.layout-margin-lg>* {
-  margin: 16px;
-}
-
-.layout-margin> {
-  .flex-gt-lg,
-  .flex-gt-md,
-  .flex-lg {
-    margin: 16px;
-  }
+// Axis padding
+@each $nspacing, $vspacing in $spacing {
+   .my-#{$nspacing} {
+      padding: $vspacing 0;
+   }
+   .mx-#{$nspacing} {
+      padding: 0 $vspacing;
+   }
 }

@@ -1,33 +1,21 @@
-@import 'queries';
-
-$sizes: ( 
-  xs: $xs-screen, 
-  gt-xs: $xs-screen-and-up, 
-  sm: $sm-screen, 
-  gt-sm: $sm-screen-and-up, 
-  md: $md-screen, 
-  gt-md: $md-screen-and-up, 
-  lg: $lg-screen, 
-  gt-lg: $lg-screen-and-up, 
-  xl: $xl-screen
-);
+@import '_sizes';
 
 .flex-order {
-  order: 0;
+   order: 0;
 }
 
 @for $i from -20 through 20 {
-  .flex-order-#{$i} {
-    order: $i;
-  }
+   .flex-order-#{$i} {
+      order: $i;
+   }
 }
 
 @each $size-name, $size-value in $sizes {
-  @media #{$size-value}{
-    @for $i from -20 through 20 {
-      .flex-order-#{$size-name}-#{$i} {
-        order: $i;
+   @media #{$size-value} {
+      @for $i from -20 through 20 {
+         .flex-order-#{$size-name}-#{$i} {
+            order: $i;
+         }
       }
-    }
-  }
+   }
 }

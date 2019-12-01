@@ -5,7 +5,7 @@ section.flex
       .subtitle.
         The <code>.flex</code> class added to a layout's child element will flex 
         (grow or shrink) to fit the unused are by other elements.
-    .example.layout-row.layout-wrap
+    .example.layout.row.wrap
       .flex-30: .box .flex-30
       .flex-45: .box .flex-45
       .flex-25: .box .flex-25
@@ -13,10 +13,10 @@ section.flex
       .flex-66: .box .flex-66
       .flex-50: .box .flex-50
       .flex: .box .flex
-    
+
     .code.row
       pre(contenteditable="true").
-        &lt;div class="layout-row layout-wrap"&gt;
+        &lt;div class="layout.row wrap"&gt;
           &lt;div class="flex-30"&gt;
             &lt;div class="box"&gt;.flex-30&lt;/div&gt;
           &lt;/div&gt;
@@ -44,7 +44,7 @@ section.flex
       .title.bold Responsive flex
       .subtitle.
         The flex classes are responsive.
-    .example.layout-row.layout-wrap
+    .example.layout.row.wrap
       .flex-xs-66.flex-33: .box flex 66% on mobile and 33% otherwise
       .flex-xs-33.flex-66: .box flex 33% on mobile and 66% otherwise
     .header
@@ -52,59 +52,58 @@ section.flex
       .subtitle.
         The layout provides various flex values to improve flexibility.
     .table-responsive: table
-        thead
-          tr
-            th
-              .title Value
-            th
-              .title Description
-        tbody
-          tr.even
-            td flex
-            td
-              | Will grow and shrink as needed.
-              br
-              | Starts with a size of 0%. Same as <pre>.flex-0</pre>.
-          tr.odd
-            td flex-none
-            td
-              | Will not grow nor shrink.
-              br
-              | Sized based on its <pre>width</pre> and <pre>height</pre> values.
-          tr.even
-            td flex-initial
-            td
-              | Will shrink as needed.
-              br
-              | Sized based on its <pre>width</pre> and <pre>height</pre> values.
-          tr.odd
-            td flex-auto
-            td
-              | Will grow and shrink as needed.
-              br 
-              | Starts with a size based on its <pre>width</pre> and <pre>height</pre> values.
-          tr.even
-            td flex-grow
-            td
-              | Will grow and shrink as needed.
-              br
-              | Starts with a size of 100%. Same as <pre>.flex-100</pre>.
-          tr.odd
-            td flex-nogrow
-            td
-              | Will shrink as needed, but won't grow.
-              br 
-              | Starts with a size based on its <pre>width</pre> and <pre>height</pre> values.
-          tr.even
-            td flex-noshrink
-            td
-              | Will grow as needed, but won't shrink.
-              br
-              | Starts with a size based on its <pre>width</pre> and <pre>height</pre> values.
-          tr.odd
-            td flex-0
-            td
-              | Will grow and shrink as needed.
-              br
-              | Starts with a size of 0%. Same as <pre>.flex</pre>.
-          
+      thead
+        tr
+          th
+            .title Value
+          th
+            .title Description
+      tbody
+        tr.even
+          td flex
+          td
+            | Will grow and shrink as needed.
+            br
+            | Starts with a size of 0%. Same as <pre>.flex-0</pre>.
+        tr.odd
+          td flex-none
+          td
+            | Will not grow nor shrink.
+            br
+            | Sized based on its <pre>width</pre> and <pre>height</pre> values.
+        tr.even
+          td flex-initial
+          td
+            | Will shrink as needed.
+            br
+            | Sized based on its <pre>width</pre> and <pre>height</pre> values.
+        tr.odd
+          td flex-auto
+          td
+            | Will grow and shrink as needed.
+            br 
+            | Starts with a size based on its <pre>width</pre> and <pre>height</pre> values.
+        tr.even
+          td flex-grow
+          td
+            | Will grow and shrink as needed.
+            br
+            | Starts with a size of 100%. Same as <pre>.flex-100</pre>.
+        tr.odd
+          td flex-nogrow
+          td
+            | Will shrink as needed, but won't grow.
+            br 
+            | Starts with a size based on its <pre>width</pre> and <pre>height</pre> values.
+        tr.even
+          td flex-noshrink
+          td
+            | Will grow as needed, but won't shrink.
+            br
+            | Starts with a size based on its <pre>width</pre> and <pre>height</pre> values.
+        tr.odd
+          td flex-0
+          td
+            | Will grow and shrink as needed.
+            br
+            | Starts with a size of 0%. Same as <pre>.flex</pre>.

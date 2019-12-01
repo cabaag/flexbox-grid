@@ -1,7 +1,7 @@
-@import 'variables';
+@import '_variables';
 
 $xs-screen: 'only screen and (max-width: #{$xs-break - 1} )';
-$xs-screen-and-up: 'only screen and (min-width: #{$xs-break} )'; 
+$xs-screen-and-up: 'only screen and (min-width: #{$xs-break} )';
 
 $sm-screen-and-down: 'only screen and (max-width: #{$xs-break - 1} )';
 $sm-screen: 'only screen and (min-width: #{$xs-break}) and (max-width: #{$sm-break - 1})';
@@ -22,6 +22,6 @@ $outer-margin: 2rem;
 $gutter-compensation: $gutter-width * 0.5 * -1;
 $half-gutter-width: $gutter-width * 0.5;
 
-$container-sm: calc( $sm-min+ $gutter-width);
-$container-md: calc( $md-min+ $gutter-width);
-$container-lg: calc( $lg-min+ $gutter-width);
+$container-sm: calc($sm-min+ $gutter-width);
+$container-md: calc($md-min+ $gutter-width);
+$container-lg: calc($lg-min+ $gutter-width);

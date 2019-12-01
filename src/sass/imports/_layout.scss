@@ -1,83 +1,72 @@
-@import '_queries';
-
-$sizes: ( 
-  xs: $xs-screen, 
-  gt-xs: $xs-screen-and-up, 
-  sm: $sm-screen, 
-  gt-sm: $sm-screen-and-up, 
-  md: $md-screen, 
-  gt-md: $md-screen-and-up, 
-  lg: $lg-screen, 
-  gt-lg: $lg-screen-and-up, 
-  xl: $xl-screen
-);
+@import '_sizes';
 
 .layout,
 .layout-column,
 .layout-row,
 .layout-row-reverse,
 .layout-column-reverse {
-  box-sizing: border-box;
-  display: flex;
+   box-sizing: border-box;
+   display: flex;
 }
-.layout-column {
-  flex-direction: column;
+
+.column {
+   flex-direction: column;
 }
-.layout-row {
-  flex-direction: row;
+.row {
+   flex-direction: row;
 }
-.layout-row-reverse {
-  flex-direction: row-reverse;
+.row-reverse {
+   flex-direction: row-reverse;
 }
-.layout-column-reverse {
-  flex-direction: column-reverse;
+.column-reverse {
+   flex-direction: column-reverse;
 }
 
 // Display none layouts, put before all to avoid override
 @each $name, $value in $sizes {
-  .layout-#{$name},
-  .layout-#{$name}-column,
-  .layout-#{$name}-row,
-  .layout-#{$name}-row-reverse,
-  .layout-#{$name}-column-reverse {
-    display: none;
-  }
+   .layout-#{$name},
+   .layout-#{$name}-column,
+   .layout-#{$name}-row,
+   .layout-#{$name}-row-reverse,
+   .layout-#{$name}-column-reverse {
+      display: none;
+   }
 }
 
 @each $name, $value in $sizes {
-  @media #{$value} {
-    .layout-#{$name},
-    .layout-#{$name}-column,
-    .layout-#{$name}-row {
-      box-sizing: border-box;
-      display: flex;
-    }
-    .layout-#{$name}-column {
-      flex-direction: column;
-    }
-    .layout-#{$name}-row {
-      flex-direction: row;
-    }
-    .layout-#{$name}-column-reverse {
-      flex-direction: column-reverse;
-    }
-    .layout-#{$name}-row-reverse {
-      flex-direction: row-reverse;
-    }
-  }
+   @media #{$value} {
+      .layout-#{$name},
+      .layout-#{$name}-column,
+      .layout-#{$name}-row {
+         box-sizing: border-box;
+         display: flex;
+      }
+      .layout-#{$name}-column {
+         flex-direction: column;
+      }
+      .layout-#{$name}-row {
+         flex-direction: row;
+      }
+      .layout-#{$name}-column-reverse {
+         flex-direction: column-reverse;
+      }
+      .layout-#{$name}-row-reverse {
+         flex-direction: row-reverse;
+      }
+   }
 }
 
-.layout-fill {
-  margin: 0;
-  width: 100%;
-  min-height: 100%;
-  height: 100%;
+.fill {
+   margin: 0;
+   width: 100%;
+   min-height: 100%;
+   height: 100%;
 }
 
-.layout-wrap {
-  flex-wrap: wrap;
+.wrap {
+   flex-wrap: wrap;
 }
 
-.layout-nowrap {
-  flex-wrap: nowrap;
+.nowrap {
+   flex-wrap: nowrap;
 }
