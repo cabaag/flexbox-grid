@@ -4,39 +4,39 @@ section.nested
       .title Nesting layouts
       .subtitle.
         You can nest your content inside another layout and so on.
-    .example.layout.row.layout-xs-column.level-1
+    .example.layout.row.layout-xs-column.level-1.spacing-1
       .flex
         .flex.box L-1
-        .flex.layout-column.level-2
-          .flex.layout.row.level-3
+        .flex.layout.column.level-2.spacing-1
+          .flex.layout.row.level-3.spacing-1
             .flex.box L-3
             .flex.box L-3
             .flex.box L-3
           .flex.box L-2
-          .flex.layout.row.level-3
+          .flex.layout.row.level-3.spacing-1
             .flex.box L-3
             .flex.box L-3
-      .flex.layout-column: .flex-100.box L-1
+      .flex.layout.column.spacing-1: .flex-12.box L-1
 
     .code.row
       pre(contenteditable="true").
-        &lt;div class="layout.row layout-xs-column level-1"&gt;
+        &lt;div class="layout row layout-xs-column level-1 spacing-1"&gt;
           &lt;div class="flex"&gt;
             &lt;div class="flex box"&gt;L-1&lt;/div&gt;
-            &lt;div class="flex layout-column level-2"&gt;
-              &lt;div class="flex layout.row level-3"&gt;
+            &lt;div class="flex layout column level-2 spacing-1"&gt;
+              &lt;div class="flex layout row level-3 spacing-1"&gt;
                 &lt;div class="flex box"&gt;L-3&lt;/div&gt;
                 &lt;div class="flex box"&gt;L-3&lt;/div&gt;
                 &lt;div class="flex box"&gt;L-3&lt;/div&gt;
               &lt;/div&gt;
               &lt;div class="flex box"&gt;L-2&lt;/div&gt;
-              &lt;div class="flex layout.row level-3"&gt;
+              &lt;div class="flex layout row level-3 spacing-1"&gt;
                 &lt;div class="flex box"&gt;L-3&lt;/div&gt;
                 &lt;div class="flex box"&gt;L-3&lt;/div&gt;
               &lt;/div&gt;
             &lt;/div&gt;
           &lt;/div&gt;
-          &lt;div class="flex layout-column"&gt;
-            &lt;div class="flex-100 box"&gt;L-1&lt;/div&gt;
+          &lt;div class="flex layout column spacing-1"&gt;
+            &lt;div class="flex-12 box"&gt;L-1&lt;/div&gt;
           &lt;/div&gt;
         &lt;/div&gt;

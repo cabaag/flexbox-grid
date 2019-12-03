@@ -1,20 +1,29 @@
 @import '_sizes';
 
-.flex-order {
-   order: 0;
-}
+// .flex-order {
+//    order: 0;
+// }
 
-@for $i from -20 through 20 {
-   .flex-order-#{$i} {
-      order: $i;
-   }
-}
+// @for $i from -20 through 20 {
+//    .flex-order-#{$i} {
+//       order: $i;
+//    }
+// }
 
-@each $size-name, $size-value in $sizes {
-   @media #{$size-value} {
+@each $breakpoint, $query in $sizes {
+   @debug $breakpoint;
+   @if ($breakpoint == default) {
       @for $i from -20 through 20 {
-         .flex-order-#{$size-name}-#{$i} {
+         .order-#{$i} {
             order: $i;
+         }
+      }
+   } @else {
+      @media #{$query} {
+         @for $i from -20 through 20 {
+            .order-#{$breakpoint}-#{$i} {
+               order: $i;
+            }
          }
       }
    }

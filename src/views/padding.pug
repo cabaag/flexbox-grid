@@ -3,9 +3,17 @@ section#padding
     .header
       .title.bold Padding
       .subtitle.
-        The <code>.p2</code> class add padding to the layout 
-        as well as all the flex children.
+        The <code>.p{a,t,r,b,l}-{1-5}</code> class add padding to elements.
     .example.layout.row.wrap.p2
-      .flex-30: .box .flex-30
-      .flex-45: .box .flex-45
-      .flex-25: .box .flex-25
+      .box.ma-2.pa-1 .pa-1
+      .box.ma-2.pa-2 .pa-2
+      .box.ma-2.pa-3 .pa-3
+      .box.ma-2.pa-4 .pa-4
+      .box.ma-2.pa-5 .pa-5
+    .header
+      .title.bold Padding axis
+      .subtitle.
+        The <code>.p{x,y}-{1-5}</code> class add padding to elements.
+    .example.layout.row.wrap.p2
+      .box.ma-2.py-5 .py-5
+      .box.ma-2.px-5 .px-5

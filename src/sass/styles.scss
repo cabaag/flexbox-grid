@@ -9,7 +9,7 @@ $secondary-color: #2c3e50;
 $color1: #9b59b6;
 $color2: #3498db;
 $color3: #e74c3c;
-$background-color: #ecf0f1;
+$background-color: #f8f9fa;
 
 // Scrollbar style
 *::-webkit-scrollbar-track {
@@ -28,10 +28,10 @@ $background-color: #ecf0f1;
 body {
    font-family: 'Roboto', sans-serif;
    color: $secondary-color;
-   background-color: #bdc3c7;
+   background-color: $background-color;
    section {
       padding: 15px 0;
-      background-color: #bdc3c7;
+      background-color: $background-color;
       box-sizing: border-box;
       .header {
          .title {
@@ -58,7 +58,7 @@ body {
 }
 
 header {
-   background-color: $background-color;
+   background-color: #d8dee9;
    min-height: 60vh;
    .title {
       font-size: 44px;
@@ -71,13 +71,13 @@ header {
 // Sansbox section
 .sandbox {
    .sandbox-container {
-      box-sizing: border-box;
-      height: 128px;
+      height: 200px;
       overflow: hidden;
-      background-color: $background-color;
-      margin: 0 auto;
+      background-color: #d8dee9;
+      border-radius: 3px;
       .box {
-         padding: 8px;
+         background: $primary-color;
+         border-radius: 3px;
          & > * {
             display: inline;
          }
@@ -148,7 +148,7 @@ table {
       background-color: $background-color;
    }
    .even {
-      background-color: #bdc3c7;
+      background-color: #d8dee9;
    }
 }
 
@@ -167,7 +167,7 @@ table {
       justify-content: center;
       align-items: center;
       font-size: 16px;
-      margin: 4px;
+      // margin: 4px;
       & > * {
          display: inline;
       }
@@ -188,7 +188,7 @@ table {
       padding: 8px;
       .box {
          display: flex;
-         color: $background-color;
+         color: #d8dee9;
          justify-content: center;
          align-items: center;
          height: 100%;
@@ -199,7 +199,7 @@ table {
 .code {
    box-sizing: border-box;
    overflow-x: hidden;
-   background-color: $background-color;
+   background-color: #d8dee9;
    min-height: 100px;
    max-height: 300px;
    margin: 20px 0;

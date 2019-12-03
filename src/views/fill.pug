@@ -5,21 +5,21 @@ section#fill
       .subtitle.
         The <code>.layout-fill</code> class forces the layout to
         fill its parent container.
-    .example.layout.row.wrap.p2
-      .flex-30.p2: .box .flex-30
-      .flex-30.layout.row.p2: .box Unfilled layout
-      .layout.row.layout-fill.level-2.p2: .box Filled layout
+    .example.layout.row.wrap.pa-2.spacing-1
+      .flex-3.pa-2: .box .flex-3
+      .flex-5.layout.row.pa-2: .box Unfilled layout
+      .layout.row.fill.level-2.pa-2: .box Filled layout
 
     .code.row
       pre(contenteditable="true").
-        &lt;div class="example layout.row wrap p2"&gt;
-          &lt;div class="flex-30 p2"&gt;
-            &lt;div class="box"&gt;.flex-30&lt;/div&gt;
+        &lt;div class="example layout row wrap pa-2"&gt;
+          &lt;div class="flex-3 pa-2"&gt;
+            &lt;div class="box"&gt;.flex-3&lt;/div&gt;
           &lt;/div&gt;
-          &lt;div class="flex-30 layout.row p2"&gt;
+          &lt;div class="flex-5 layout row pa-2"&gt;
             &lt;div class="box"&gt;Unfilled layout&lt;/div&gt;
           &lt;/div&gt;
-          &lt;div class="layout.row layout-fill level-2 p2"&gt;
+          &lt;div class="layout row fill level-2 pa-2"&gt;
             &lt;div class="box"&gt;Filled layout&lt;/div&gt;
           &lt;/div&gt;
         &lt;/div&gt;

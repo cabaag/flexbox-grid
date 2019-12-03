@@ -14,10 +14,10 @@
 body {
   font-family: 'Roboto', sans-serif;
   color: #2c3e50;
-  background-color: #bdc3c7; }
+  background-color: #f8f9fa; }
   body section {
     padding: 15px 0;
-    background-color: #bdc3c7;
+    background-color: #f8f9fa;
     box-sizing: border-box; }
     body section .header .title {
       color: #27ae60;
@@ -30,13 +30,13 @@ body {
       margin-bottom: 20px; }
     body section code {
       color: #27ae60;
-      background-color: #ecf0f1;
+      background-color: #f8f9fa;
       padding: 0 4px; }
   body .bold {
     font-weight: bold; }
 
 header {
-  background-color: #ecf0f1;
+  background-color: #d8dee9;
   min-height: 60vh; }
   header .title {
     font-size: 44px; }
@@ -44,13 +44,13 @@ header {
     font-size: 22px; }
 
 .sandbox .sandbox-container {
-  box-sizing: border-box;
-  height: 128px;
+  height: 200px;
   overflow: hidden;
-  background-color: #ecf0f1;
-  margin: 0 auto; }
+  background-color: #d8dee9;
+  border-radius: 3px; }
   .sandbox .sandbox-container .box {
-    padding: 8px; }
+    background: #27ae60;
+    border-radius: 3px; }
     .sandbox .sandbox-container .box > * {
       display: inline; }
   .sandbox .sandbox-container .box0 {
@@ -75,7 +75,7 @@ table {
   width: 100%;
   max-width: 100%;
   border: 1px solid #8aa4be;
-  background-color: #ecf0f1; }
+  background-color: #f8f9fa; }
   table thead,
   table tbody,
   table tr,
@@ -100,9 +100,9 @@ table {
     color: #27ae60;
     display: inline; }
   table .odd {
-    background-color: #ecf0f1; }
+    background-color: #f8f9fa; }
   table .even {
-    background-color: #bdc3c7; }
+    background-color: #d8dee9; }
 
 .example {
   margin: 30px 0; }
@@ -110,7 +110,7 @@ table {
     min-width: 40px;
     min-height: 40px;
     background: #27ae60;
-    color: #ecf0f1;
+    color: #f8f9fa;
     display: -webkit-box;
     display: flex;
     align-content: center;
@@ -119,8 +119,7 @@ table {
             justify-content: center;
     -webkit-box-align: center;
             align-items: center;
-    font-size: 16px;
-    margin: 4px; }
+    font-size: 16px; }
     .example .box > * {
       display: inline; }
   .example.level-1 {
@@ -139,7 +138,7 @@ table {
     .example .level-3 .box {
       display: -webkit-box;
       display: flex;
-      color: #ecf0f1;
+      color: #d8dee9;
       -webkit-box-pack: center;
               justify-content: center;
       -webkit-box-align: center;
@@ -149,7 +148,7 @@ table {
 .code {
   box-sizing: border-box;
   overflow-x: hidden;
-  background-color: #ecf0f1;
+  background-color: #d8dee9;
   min-height: 100px;
   max-height: 300px;
   margin: 20px 0;

@@ -32,36 +32,37 @@ $flex: (
    }
 }
 
-@mixin set-size($size, $flex-size, $breakpoint: null) {
-   .column > .flex-#{$breakpoint}-#{$flex-size},
-   .row > .flex-#{$breakpoint}-#{$flex-size} {
+@mixin set-size($size, $gridSize, $breakpoint: null) {
+   .column > .flex-#{$breakpoint}-#{$gridSize},
+   .row > .flex-#{$breakpoint}-#{$gridSize} {
       flex: 1 1 $size;
       box-sizing: border-box;
    }
-   .column > .flex-#{$breakpoint}-#{$flex-size} {
+   .column > .flex-#{$breakpoint}-#{$gridSize} {
       max-height: $size;
    }
-   .row > .flex-#{$breakpoint}-#{$flex-size} {
+   .row > .flex-#{$breakpoint}-#{$gridSize} {
       max-width: $size;
    }
 }
 
-@mixin set-size-default($size, $flexWidth) {
-   .column > .flex-#{$flexWidth},
-   .row > .flex-#{$flexWidth} {
+@mixin set-size-default($size, $gridSize) {
+   .column > .flex-#{$gridSize},
+   .row > .flex-#{$gridSize} {
       flex: 1 1 $size;
       box-sizing: border-box;
    }
-   .column > .flex-#{$flexWidth} {
+   .column > .flex-#{$gridSize} {
       max-height: $size;
    }
-   .row > .flex-#{$flexWidth} {
+   .row > .flex-#{$gridSize} {
       max-width: $size;
    }
 }
 
 @each $breakpoint, $query in $sizes {
-   @if ($query = 'only screen') {
+   @debug $breakpoint;
+   @if ($breakpoint == default) {
       @for $i from 0 through 12 {
          @include set-size-default((percentage($i) / 12), $i);
       }

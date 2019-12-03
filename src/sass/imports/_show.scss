@@ -1,15 +1,16 @@
 @import '_sizes';
 
-@each $name, $query in $sizes {
+@each $breakpoint, $query in $sizes {
    // Hidden by default, if media is equal then will show
-   .show-#{$name} {
+   .show-#{$breakpoint} {
       display: none;
       @media #{$query} {
          display: flex;
       }
    }
+
    // Showed by default, if media is equal then will hide
-   .hide-#{$name} {
+   .hide-#{$breakpoint} {
       display: flex;
       @media #{$query} {
          display: none;

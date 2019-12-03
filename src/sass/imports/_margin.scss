@@ -1,26 +1,20 @@
 @import '_variables';
 
-// Direction padding
-@each $nspacing, $vspacing in $spacing {
-   @each $ndirection, $value in $direction {
+@each $ndirection, $value in $direction {
+   // Direction margin
+   @each $nspacing, $vspacing in $spacing {
       .m#{$ndirection}-#{$nspacing} {
-         padding#{$value}: $vspacing;
+         margin#{$value}: $vspacing;
       }
-   }
-   .layout.row.spacing-#{$nspacing}:not(:last-child) > * {
-      margin-right: $vspacing;
-   }
-   .layout.column.spacing-#{$nspacing}:not(:last-child) > * {
-      margin-bottom: $vspacing;
    }
 }
 
-// Axis padding
+// Axis margin
 @each $nspacing, $vspacing in $spacing {
    .my-#{$nspacing} {
-      padding: $vspacing 0;
+      margin: $vspacing 0;
    }
    .mx-#{$nspacing} {
-      padding: 0 $vspacing;
+      margin: 0 $vspacing;
    }
 }

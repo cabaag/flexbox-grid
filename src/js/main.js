@@ -1,6 +1,10 @@
-let horizontal = '-stretch';
-let vertical = '-start';
-const direction = 'row';
+let justifyContent = 'flex-start';
+let justifyItems = 'flex-start';
+let alignContent = 'flex-start';
+let alignItems = 'flex-start';
+let wrap = 'wrap';
+let items = 3;
+
 let sandbox;
 
 function setDirection(direc) {
@@ -26,18 +30,53 @@ function setDirection(direc) {
    }
 }
 
-function setHorizontal(horiz) {
-   sandbox.classList.remove(`align${vertical}${horizontal}`);
-   horizontal = horiz;
-   sandbox.classList.add(`align${vertical}${horizontal}`);
+function changeChildren() {
+   if (document.getElementById('children').value < 0 && document.getElementById('children').value > 40) {
+      return;
+   }
+   items = +document.getElementById('children').value;
+   sandbox.innerHTML = '';
+   console.log(items);
+   for (let i = 1; i < items + 1; i += 1) {
+      console.log(i);
+      const node = document.createElement('div');
+      node.classList.add('box', 'ma-2');
+      node.style.padding = `${i * 2}px`;
+      sandbox.appendChild(node);
+   }
 }
 
-function setVertical(vert) {
-   sandbox.classList.remove(`align${vertical}${horizontal}`);
-   vertical = vert;
-   sandbox.classList.add(`align${vertical}${horizontal}`);
+function setWrap(newWrap) {
+   sandbox.classList.remove(wrap);
+   wrap = newWrap;
+   sandbox.classList.add(newWrap);
+}
+
+function setJustifyContent(newHorizontal) {
+   sandbox.classList.remove(justifyContent);
+   justifyContent = newHorizontal;
+   sandbox.classList.add(newHorizontal);
+}
+
+function setJustifyItems(newHorizontal) {
+   sandbox.classList.remove(justifyItems);
+   justifyItems = newHorizontal;
+   sandbox.classList.add(newHorizontal);
+}
+
+function setAlignContent(newVertical) {
+   sandbox.classList.remove(alignContent);
+   alignContent = newVertical;
+   sandbox.classList.add(newVertical);
+}
+
+function setAlignItems(newVertical) {
+   sandbox.classList.remove(alignItems);
+   alignItems = newVertical;
+   sandbox.classList.add(newVertical);
 }
 
 setTimeout(() => {
    sandbox = document.querySelector('.sandbox-container');
+   changeChildren();
 });

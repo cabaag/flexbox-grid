@@ -1,63 +1,133 @@
 section.sandbox
-  .container
-    .header
-      .title.bold Sandbox
-      .subtitle Enjoy the power of flexbox
+   .container
+      .header
+         .title.bold Sandbox
+         .subtitle Enjoy the power of flexbox
 
-    .flex
-      .sandbox-container.layout.row
-        .box.box0
-        .box.box1
-        .box.box2
-    .controls.layout.row.wrap.align-items-space-around.pt-4
-      .flex.flex-xs-100
-        .title.mb-2 Direction
-        form
-          input(type='radio' name='direction' onchange='setDirection("row")' value='row' checked)
-          span  Row
-          br
-          input(type='radio' name='direction' onchange='setDirection("col")' value='col')
-          span  Column
-          br
-          input(type='radio' name='direction' onchange='setDirection("row reverse")' value='row.reverse')
-          span  Row reverse
-          br
-          input(type='radio' name='direction' onchange='setDirection("col reverse")' value='col.reverse')
-          span  Column reverse
-      .flex.flex-xs-100
-        .title.mb-2 Vertical Alignment
-        form
-          input(type='radio' name='vertical' onchange='setVertical("-start")' checked)
-          span  None
-          br
-          input(type='radio' name='vertical' onchange='setVertical("-start")')
-          span  Start
-          br
-          input(type='radio' name='vertical' onchange='setVertical("-center")')
-          span  Center
-          br
-          input(type='radio' name='vertical' onchange='setVertical("-end")')
-          span  End
-          br
-          input(type='radio' name='vertical' onchange='setVertical("-space-around")')
-          span  Space around
-          br
-          input(type='radio' name='vertical' onchange='setVertical("-space-between")')
-          span  Space between
-      .flex.flex-xs-100
-        .title.mb-2 Horizontal Alignment
-        form
-          input(type='radio' name='horizontal' onchange='setHorizontal("-stretch")' checked)
-          span  None
-          br
-          input(type='radio' name='horizontal' onchange='setHorizontal("-start")')
-          span  Start
-          br
-          input(type='radio' name='horizontal' onchange='setHorizontal("-center")')
-          span  Center
-          br
-          input(type='radio' name='horizontal' onchange='setHorizontal("-end")')
-          span  End
-          br
-          input(type='radio' name='horizontal' onchange='setHorizontal("-stretch")')
-          span  Stretch
+      .flex
+         .title.mb-2 Children
+         input(type='number' value='3' id="children" onchange='changeChildren()' max="40" min="1")
+
+      .flex
+         .title.mb-2 Direction
+         form
+            .layout.row.wrap.spacing-1
+               .flex-6
+                  input(type='radio' name='direction' onchange='setDirection("row")' value='row' checked)
+                  span  Row
+               .flex-6
+                  input(type='radio' name='direction' onchange='setDirection("col")' value='col')
+                  span  Column
+               .flex-6
+                  input(type='radio' name='direction' onchange='setDirection("row reverse")' value='row.reverse')
+                  span  Row reverse
+               .flex-6
+                  input(type='radio' name='direction' onchange='setDirection("col reverse")' value='col.reverse')
+                  span  Column reverse
+
+      .flex
+         .title.mb-2 Wrap
+         form
+            .layout.row.wrap.spacing-1
+               .flex-6
+                  input(type='radio' name='direction' onchange='setWrap("wrap")' value='wrap' checked)
+                  span  Yes
+               .flex-6
+                  input(type='radio' name='direction' onchange='setWrap("nowrap")' value='nowrap')
+                  span  No
+         br
+      .flex
+         .sandbox-container.layout.row.wrap.spacing-2
+
+      .controls.layout.row.wrap.align-items-space-around.pt-4
+         .mb-2.flex.flex-xs-6.order-xs-1
+            .title.mb-2 Justify content
+            form
+               input(type='radio' name='vertical' onchange='setJustifyContent("justify-content-baseline")')
+               span  baseline
+               br
+               input(type='radio' name='vertical' onchange='setJustifyContent("justify-content-stretch")')
+               span  stretch
+               br
+               input(type='radio' name='vertical' onchange='setJustifyContent("justify-content-start")')
+               span  flex-start
+               br
+               input(type='radio' name='vertical' onchange='setJustifyContent("justify-content-center")')
+               span  center
+               br
+               input(type='radio' name='vertical' onchange='setJustifyContent("justify-content-end")')
+               span  flex-end
+               br
+               input(type='radio' name='vertical' onchange='setJustifyContent("justify-content-space-around")')
+               span  space-around
+               br
+               input(type='radio' name='vertical' onchange='setJustifyContent("justify-content-space-between")')
+               span  space-between
+               br
+               input(type='radio' name='vertical' onchange='setJustifyContent("justify-content-space-evenly")')
+               span  space-evenly
+               br
+         .mb-2.flex.flex-xs-6.order-xs-3
+            .title.mb-2 Justify items
+            form
+               input(type='radio' name='horizontal' onchange='setJustifyItems("justify-items-baseline")')
+               span  baseline
+               br
+               input(type='radio' name='horizontal' onchange='setJustifyItems("justify-items-stretch")')
+               span  stretch
+               br
+               input(type='radio' name='horizontal' onchange='setJustifyItems("justify-items-start")')
+               span  flex-start
+               br
+               input(type='radio' name='horizontal' onchange='setJustifyItems("justify-items-end")')
+               span  flex-end
+               br
+               input(type='radio' name='horizontal' onchange='setJustifyItems("justify-items-center")')
+               span  center
+               br
+         .mb-2.flex.flex-xs-6.order-xs-2
+            .title.mb-2 Align content
+            form
+               input(type='radio' name='horizontal' onchange='setAlignContent("align-content-baseline")')
+               span  baseline
+               br
+               input(type='radio' name='horizontal' onchange='setAlignContent("align-content-stretch")')
+               span  stretch
+               br
+               input(type='radio' name='horizontal' onchange='setAlignContent("align-content-start")')
+               span  flex-start
+               br
+               input(type='radio' name='horizontal' onchange='setAlignContent("align-content-end")')
+               span  flex-end
+               br
+               input(type='radio' name='horizontal' onchange='setAlignContent("align-content-center")')
+               span  center
+               br
+               input(type='radio' name='horizontal' onchange='setAlignContent("align-content-space-around")')
+               span  space-around
+               br
+               input(type='radio' name='horizontal' onchange='setAlignContent("align-content-space-between")')
+               span  space-between
+               br
+               input(type='radio' name='horizontal' onchange='setAlignContent("align-content-space-evenly")')
+               span  space-evenly
+               br
+         .mb-2.flex.flex-xs-6.order-xs-4
+            .title.mb-2 Align items
+            form
+               input(type='radio' name='horizontal' onchange='setAlignItems("align-items-baseline")' )
+               span  baseline
+               br
+               input(type='radio' name='horizontal' onchange='setAlignItems("align-items-stretch")')
+               span  stretch
+               br
+               input(type='radio' name='horizontal' onchange='setAlignItems("align-items-start")')
+               span  flex-start
+               br
+               input(type='radio' name='horizontal' onchange='setAlignItems("align-items-end")')
+               span  flex-end
+               br
+               input(type='radio' name='horizontal' onchange='setAlignItems("align-items-center")')
+               span  center
+               br
+

@@ -1,26 +1,24 @@
 @import '_sizes';
 
-@for $i from 0 through 95 {
-   @if ($i % 5==0 or $i % 33==0) {
+@for $i from 0 through 12 {
+   .offset-#{$i} {
+      margin-left: percentage($i) / 12;
+   }
+   [dir='rtl'] {
       .offset-#{$i} {
-         margin-left: percentage($i) / 100;
+         margin-left: auto;
+         margin-right: percentage($i) / 12;
       }
-      [dir='rtl'] {
-         .offset-#{$i} {
-            margin-left: auto;
-            margin-right: percentage($i) / 100;
+   }
+   @each $name, $value in $sizes {
+      @media #{$value} {
+         .offset-#{$name}-#{$i} {
+            margin-left: percentage($i) / 12;
          }
-      }
-      @each $name, $value in $sizes {
-         @media #{$value} {
+         [dir='rtl'] {
             .offset-#{$name}-#{$i} {
-               margin-left: percentage($i) / 100;
-            }
-            [dir='rtl'] {
-               .offset-#{$name}-#{$i} {
-                  margin-left: auto;
-                  margin-right: percentage($i) / 100;
-               }
+               margin-left: auto;
+               margin-right: percentage($i) / 12;
             }
          }
       }
