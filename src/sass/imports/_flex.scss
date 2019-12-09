@@ -61,7 +61,6 @@ $flex: (
 }
 
 @each $breakpoint, $query in $sizes {
-   @debug $breakpoint;
    @if ($breakpoint == default) {
       @for $i from 0 through 12 {
          @include set-size-default((percentage($i) / 12), $i);
