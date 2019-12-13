@@ -1,41 +1,25 @@
-.layout-padding-sm>* {
-  padding: 4px;
+@import '_variables';
+
+@each $ndirection, $value in $direction {
+   // Direction padding
+   @each $nspacing, $vspacing in $spacing {
+      .p#{$ndirection}-#{$nspacing} {
+         padding#{$value}: $vspacing;
+      }
+
+      // Padding for child elements of a layout
+      .layout.spacing-#{$nspacing} > * {
+         padding: $vspacing;
+      }
+   }
 }
 
-.layout-padding {
-  >.flex-sm {
-    padding: 4px;
-  }
-  padding: 8px;
-}
-
-.layout-padding-gt-sm,
-.layout-padding-md {
-  padding: 8px;
-  >* {
-    padding: 8px;
-  }
-}
-
-.layout-padding> {
-  *,
-  .flex,
-  .flex-gt-sm,
-  .flex-md {
-    padding: 8px;
-  }
-}
-
-.layout-padding-gt-lg>*,
-.layout-padding-gt-md>*,
-.layout-padding-lg>* {
-  padding: 16px;
-}
-
-.layout-padding> {
-  .flex-gt-lg,
-  .flex-gt-md,
-  .flex-lg {
-    padding: 16px;
-  }
+// Axis padding
+@each $nspacing, $vspacing in $spacing {
+   .py-#{$nspacing} {
+      padding: $vspacing 0;
+   }
+   .px-#{$nspacing} {
+      padding: 0 $vspacing;
+   }
 }

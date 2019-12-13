@@ -1,88 +1,90 @@
-@import 'queries';
+@import '_sizes';
 
-$sizes: ( 
-  xs: $xs-screen, 
-  gt-xs: $xs-screen-and-up, 
-  sm: $sm-screen, 
-  gt-sm: $sm-screen-and-up, 
-  md: $md-screen, 
-  gt-md: $md-screen-and-up, 
-  lg: $lg-screen, 
-  gt-lg: $lg-screen-and-up, 
-  xl: $xl-screen
+$justify-content: (
+   baseline: baseline,
+   center: center,
+   end: flex-end,
+   start: flex-start,
+   stretch: stretch,
+   space-around: space-around,
+   space-between: space-between,
+   space-evenly: space-evenly,
 );
 
-$horizontal-alignment: (start: flex-start, center: center, end: flex-end, stretch: stretch);
-$vertical-alignment: (start: flex-start, center: center, end: flex-end, space-around: space-around, space-between: space-between);
-.layout-align {
-  align-items: stretch;
-  align-content: stretch;
-  justify-content: flex-start;
+$justify-items: (
+   baseline: baseline,
+   stretch: stretch,
+   start: flex-start,
+   end: flex-end,
+   center: center,
+);
+
+$align-content: (
+   baseline: baseline,
+   stretch: stretch,
+   start: flex-start,
+   end: flex-end,
+   center: center,
+   space-around: space-around,
+   space-between: space-between,
+   space-evenly: space-evenly,
+);
+
+$align-items: (
+   baseline: baseline,
+   stretch: stretch,
+   start: flex-start,
+   end: flex-end,
+   center: center,
+);
+
+$align-self: (
+   baseline: baseline,
+   stretch: stretch,
+   start: flex-start,
+   end: flex-end,
+   center: center,
+);
+
+@each $nameJust, $valueJust in $justify-content {
+   .justify-content-#{$nameJust} {
+      justify-content: $valueJust;
+   }
 }
 
-@each $name, $value in $sizes {
-  @media #{$value}{
-    .layout-align-#{$name} {
-      align-items: stretch;
-      align-content: stretch;
-      justify-content: flex-start;
-    }
-  }
+@each $nameJust, $valueJust in $justify-items {
+   .justify-items-#{$nameJust} {
+      justify-items: $valueJust;
+   }
 }
 
-@each $vertical-name, $vertical-value in $vertical-alignment {
-  .layout-align-#{$vertical-name} {
-    justify-content: $vertical-value;
-  }
-  @each $horizontal-name, $horizontal-value in $horizontal-alignment {
-    .layout-align-#{$vertical-name}-#{$horizontal-name} {
-      justify-content: $vertical-value;
-      align-items: $horizontal-value;
-      align-content: $horizontal-value;
-      @if ($horizontal-name=="center") {
-        max-width: 100%;
-        &>* {
-          box-sizing: border-box;
-          max-width: 100%;
-        }
-      }
-    }
-  }
+@each $nameJust, $valueJust in $align-items {
+   .align-items-#{$nameJust} {
+      align-items: $valueJust;
+   }
 }
 
-@each $size-name, $size-value in $sizes {
-  @media #{$size-value}{
-    @each $vertical-name, $vertical-value in $vertical-alignment {
-      .layout-align-#{$size-name}-#{$vertical-name} {
-        justify-content: $vertical-value;
-      }
-      @each $horizontal-name, $horizontal-value in $horizontal-alignment {
-        .layout-align-#{$size-name}-#{$vertical-name}-#{$horizontal-name} {
-          justify-content: $vertical-value;
-          align-items: $horizontal-value;
-          align-content: $horizontal-value;
-          @if ($horizontal-name=="center") {
-            max-width: 100%;
-            &>* {
-              box-sizing: border-box;
-              max-width: 100%;
-            }
-          }
-        }
-      }
-    }
-  }
+@each $nameJust, $valueJust in $align-content {
+   .align-content-#{$nameJust} {
+      align-content: $valueJust;
+   }
+}
+
+@each $nameJust, $valueJust in $align-self {
+   .align-self-#{$nameJust} {
+      align-self: $valueJust;
+   }
 }
 
 .center,
 .center-align {
-  text-align: center;
+   text-align: center;
 }
 
 .left-align {
-  text-align: left;
+   text-align: left;
 }
 
 .right-align {
-  text-align: right;
+   text-align: right;
 }

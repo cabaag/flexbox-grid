@@ -1,219 +1,225 @@
+/**
+* Style for github website
+*/
+
 @import 'imports/queries';
+
 $primary-color: #27ae60;
 $secondary-color: #2c3e50;
 $color1: #9b59b6;
 $color2: #3498db;
 $color3: #e74c3c;
-$background-color: #ecf0f1;
+$background-color: #f8f9fa;
+
 // Scrollbar style
 *::-webkit-scrollbar-track {
-  background-color: transparent;
+   background-color: transparent;
 }
 
 *::-webkit-scrollbar {
-  width: 5px;
-  background-color: transparent;
+   width: 5px;
+   background-color: transparent;
 }
 
 *::-webkit-scrollbar-thumb {
-  background-color: rgba($secondary-color, 0.5);
+   background-color: rgba($secondary-color, 0.5);
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
-  color: $secondary-color;
-  background-color: #bdc3c7;
-  section {
-    padding: 15px 0;
-    background-color: #bdc3c7;
-    box-sizing: border-box;
-    .header {
-      .title {
-        color: $primary-color;
-        font-size: 28px;
-        margin: 8px 0;
-        font-weight: bold;
-      }
-      .subtitle {
-        font-size: 16px;
-        margin: 4px 0;
-        margin-bottom: 20px;
-      }
-    }
-    code {
-      color: $primary-color;
+   font-family: 'Roboto', sans-serif;
+   color: $secondary-color;
+   background-color: $background-color;
+   section {
+      padding: 15px 0;
       background-color: $background-color;
-      padding: 0 4px;
-    }
-  }
-  .bold {
-    font-weight: bold;
-  }
+      box-sizing: border-box;
+      .header {
+         .title {
+            color: $primary-color;
+            font-size: 28px;
+            margin: 8px 0;
+            font-weight: bold;
+         }
+         .subtitle {
+            font-size: 16px;
+            margin: 4px 0;
+            margin-bottom: 20px;
+         }
+      }
+      code {
+         color: $primary-color;
+         background-color: $background-color;
+         padding: 0 4px;
+      }
+   }
+   .bold {
+      font-weight: bold;
+   }
 }
 
 header {
-  background-color: $background-color;
-  height: 100vh;
-  .title {
-    font-size: 44px;
-  }
-  .subtitle {
-    font-size: 22px;
-  }
+   background-color: #d8dee9;
+   min-height: 60vh;
+   .title {
+      font-size: 44px;
+   }
+   .subtitle {
+      font-size: 22px;
+   }
 }
 
 // Sansbox section
 .sandbox {
-  .sandbox-container {
-    box-sizing: border-box;
-    height: 128px;
-    overflow: hidden;
-    background-color: $background-color;
-    margin: 0 auto;
-    .box {
-      padding: 8px;
-      &>* {
-        display: inline;
+   .sandbox-container {
+      height: 200px;
+      overflow: hidden;
+      background-color: #d8dee9;
+      border-radius: 3px;
+      .box {
+         background: $primary-color;
+         border-radius: 3px;
+         & > * {
+            display: inline;
+         }
       }
-    }
-    .box0 {
-      background: $primary-color;
-    }
-    .box1 {
-      background: $color1;
-    }
-    .box2 {
-      background: $color2;
-    }
-  }
-  .controls {
-    box-sizing: border-box;
-    .title {
-      font-size: 1rem;
-      margin: 0;
-    }
-  }
+      .box0 {
+         background: $primary-color;
+      }
+      .box1 {
+         background: $color1;
+      }
+      .box2 {
+         background: $color2;
+      }
+   }
+   .controls {
+      box-sizing: border-box;
+      .title {
+         font-size: 1rem;
+         margin: 0;
+      }
+   }
 }
 
 // Option section
 .table-responsive {
-  width: 100%;
-  overflow-y: hidden;
-  margin: 40px 0;
+   width: 100%;
+   overflow-y: hidden;
+   margin: 40px 0;
 }
 
 table {
-  width: 100%;
-  max-width: 100%;
-  border: 1px solid lighten($secondary-color, 40);
-  background-color: $background-color;
-  thead,
-  tbody,
-  tr,
-  th,
-  td {
-    border: inherit;
-  }
-  thead,
-  td.bold {
-    // background-color: $secondary-color;
-    // color: $primary-color;
-    background-color: $secondary-color;
-    color: $primary-color;
-  }
-  tr,
-  th,
-  td {
-    padding: 8px;
-    min-width: 120px;
-  }
-  .title {
-    font-size: 14px;
-  }
-  .subtitle {
-    font-size: 10px;
-  }
-  td pre {
-    margin: 0;
-    color: $primary-color;
-    display: inline;
-  }
-  .odd {
-    background-color: $background-color;
-  }
-  .even {
-    background-color: #bdc3c7;
-  }
+   width: 100%;
+   max-width: 100%;
+   border: 1px solid lighten($secondary-color, 40);
+   background-color: $background-color;
+   thead,
+   tbody,
+   tr,
+   th,
+   td {
+      border: inherit;
+   }
+   thead,
+   td.bold {
+      // background-color: $secondary-color;
+      // color: $primary-color;
+      background-color: $secondary-color;
+      color: $primary-color;
+   }
+   tr,
+   th,
+   td {
+      padding: 8px;
+      min-width: 120px;
+   }
+   .title {
+      font-size: 14px;
+   }
+   .subtitle {
+      font-size: 10px;
+   }
+   td pre {
+      margin: 0;
+      color: $primary-color;
+      display: inline;
+   }
+   .odd {
+      background-color: $background-color;
+   }
+   .even {
+      background-color: #d8dee9;
+   }
 }
 
 // Responsive section
 .example {
-  // background-color: $secondary-color;
-  margin: 30px 0;
-  .box {
-    min-width: 40px;
-    min-height: 40px;
-    background: $primary-color;
-    color: $background-color;
-    display: flex;
-    align-content: center;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    font-size: 16px;
-    margin: 4px;
-    &>* {
-      display: inline;
-    }
-  }
-  &.level-1 {
-    background-color: darken($primary-color, 10) !important;
-  }
-  .level-2 {
-    background-color: darken($primary-color, 20);
-  }
-  .level-3 {
-    background-color: darken($primary-color, 30);
-  }
-  .level-1,
-  .level-2,
-  .level-3 {
-    margin: 8px;
-    padding: 8px;
-    .box {
-      display: flex;
+   // background-color: $secondary-color;
+   margin: 30px 0;
+   .box {
+      min-width: 40px;
+      min-height: 40px;
+      background: $primary-color;
       color: $background-color;
+      display: flex;
+      align-content: center;
+      text-align: center;
       justify-content: center;
       align-items: center;
-      height: 100%;
-    }
-  }
+      font-size: 16px;
+      // margin: 4px;
+      & > * {
+         display: inline;
+      }
+   }
+   &.level-1 {
+      background-color: darken($primary-color, 10) !important;
+   }
+   .level-2 {
+      background-color: darken($primary-color, 20);
+   }
+   .level-3 {
+      background-color: darken($primary-color, 30);
+   }
+   .level-1,
+   .level-2,
+   .level-3 {
+      margin: 8px;
+      padding: 8px;
+      .box {
+         display: flex;
+         color: #d8dee9;
+         justify-content: center;
+         align-items: center;
+         height: 100%;
+      }
+   }
 }
 
 .code {
-  box-sizing: border-box;
-  overflow-x: hidden;
-  background-color: $background-color;
-  min-height: 100px;
-  max-height: 300px;
-  margin: 20px 0;
-  padding: 0 16px;
-  color: $primary-color;
+   box-sizing: border-box;
+   overflow-x: hidden;
+   background-color: #d8dee9;
+   min-height: 100px;
+   max-height: 300px;
+   margin: 20px 0;
+   padding: 0 16px;
+   color: $primary-color;
 }
 
 // Offset section
 .heart {
-  margin: 16px 0;
-  .border,
-  .content {
-    padding: 1rem 0;
-    height: 16px;
-    margin: 0 -8px;
-  }
-  .border {
-    background: $primary-color;
-  }
-  .content {
-    background: $color3;
-  }
+   margin: 16px 0;
+   .border,
+   .content {
+      padding: 1rem 0;
+      height: 16px;
+      margin: 0 -8px;
+   }
+   .border {
+      background: $primary-color;
+   }
+   .content {
+      background: $color3;
+   }
 }

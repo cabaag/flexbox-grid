@@ -1,44 +1,26 @@
-@import 'queries';
+@import '_sizes';
 
-$sizes: ( 
-  xs: $xs-screen, 
-  gt-xs: $xs-screen-and-up, 
-  sm: $sm-screen, 
-  gt-sm: $sm-screen-and-up, 
-  md: $md-screen, 
-  gt-md: $md-screen-and-up, 
-  lg: $lg-screen, 
-  gt-lg: $lg-screen-and-up, 
-  xl: $xl-screen
-);
-
-@for $i from 0 through 95 {
-  @if($i % 5==0 or $i % 33==0) {
-    .flex-offset-#{$i},
-    .offset-#{$i} {
-      margin-left: percentage($i) / 100;
-    }
-    [dir=rtl] {
-      .flex-offset-#{$i},
+@for $i from 0 through 12 {
+   .offset-#{$i} {
+      margin-left: percentage($i) / 12;
+   }
+   [dir='rtl'] {
       .offset-#{$i} {
-        margin-left: auto;
-        margin-right: percentage($i) / 100;
+         margin-left: auto;
+         margin-right: percentage($i) / 12;
       }
-    }
-    @each $name, $value in $sizes {
+   }
+   @each $name, $value in $sizes {
       @media #{$value} {
-        .flex-offset-#{$name}-#{$i},
-        .offset-#{$name}-#{$i} {
-          margin-left: percentage($i) / 100;
-        }
-        [dir=rtl] {
-          .flex-offset-#{$name}-#{$i},
-          .offset-#{$name}-#{$i} {
-            margin-left: auto;
-            margin-right: percentage($i) / 100;
-          }
-        }
+         .offset-#{$name}-#{$i} {
+            margin-left: percentage($i) / 12;
+         }
+         [dir='rtl'] {
+            .offset-#{$name}-#{$i} {
+               margin-left: auto;
+               margin-right: percentage($i) / 12;
+            }
+         }
       }
-    }
-  }
+   }
 }

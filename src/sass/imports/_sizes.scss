@@ -1,0 +1,14 @@
+@import '_queries';
+
+$sizes: (
+   default: 'only screen',
+   xs: $xs-screen,
+   gt-xs: $xs-screen-and-up,
+   sm: $sm-screen,
+   gt-sm: $sm-screen-and-up,
+   md: $md-screen,
+   gt-md: $md-screen-and-up,
+   lg: $lg-screen,
+   gt-lg: $lg-screen-and-up,
+   xl: $xl-screen,
+);

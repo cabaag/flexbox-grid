@@ -1,74 +1,74 @@
 section.alignment
   .container
     .header
-      .title.bold Layout alignment
+      .title.bold Alignment
       .subtitle.
-        The <code>.layout-align</code> class is composite for two words, the first
+        The <code>.align</code> class is composite for two words, the first
         indicates the horizontal alingment and the second indicates vertical alignment.
 
         If one word is passed it'kk works but only for horizontal alignment.
 
     .table-responsive: table
-        thead
-          tr
-            th
-              .title Order
-            th
-              .title Breakpoint
-        tbody
-          tr.even
-            td layout-align
-            td Default layout-align can be override by other
-          tr.odd
-            td layout-align-xs
-            td <pre>width</pre> &lt; 600px
-          tr.even
-            td layout-align-gt-xs
-            td <pre>width</pre> &ge; 600px
-          tr.odd
-            td layout-align-sm
-            td 600px &le; <pre>width</pre> &lt; 960px 
-          tr.even
-            td layout-align-gt-sm
-            td <pre>width</pre> &ge; 960px
-          tr.odd
-            td layout-align-md
-            td 960px &le; <pre>width</pre> &lt; 1280px
-          tr.even
-            td layout-align-gt-md
-            td <pre>width</pre> &ge; 1280px
-          tr.odd
-            td layout-align-lg
-            td 1280px &le; <pre>width</pre> &lt; 1920px
-          tr.even
-            td layout-align-gt-lg
-            td <pre>width</pre> &ge; 1920px
-          tr.odd
-            td layout-align-xl
-            td <pre>width</pre> &ge; 1920px
-            
-    .example.layout-row.layout-wrap
-      .flex-40.layout-column.layout-align-center
-        .flex.layout-row.layout-align-space-around-center
-          .box
-          .box
-          .box
-        .flex.box
-        .flex.box
-      .flex-20.layout-column.layout-align-space-around-stretch
-        .flex-30.box
-        .flex-30.box
-      .flex-40.layout-row.layout-wrap.layout-align-end
-        .flex-30.box
-        .flex-30.box
-        .flex-70.box
-        .flex-30.box
-    
+      thead
+        tr
+          th
+            .title Order
+          th
+            .title Breakpoint
+      tbody
+        tr.even
+          td align
+          td Default align can be override by other
+        tr.odd
+          td align-xs
+          td <pre>width</pre> &lt; 600px
+        tr.even
+          td align-gt-xs
+          td <pre>width</pre> &ge; 600px
+        tr.odd
+          td align-sm
+          td 600px &le; <pre>width</pre> &lt; 960px 
+        tr.even
+          td align-gt-sm
+          td <pre>width</pre> &ge; 960px
+        tr.odd
+          td align-md
+          td 960px &le; <pre>width</pre> &lt; 1280px
+        tr.even
+          td align-gt-md
+          td <pre>width</pre> &ge; 1280px
+        tr.odd
+          td align-lg
+          td 1280px &le; <pre>width</pre> &lt; 1920px
+        tr.even
+          td align-gt-lg
+          td <pre>width</pre> &ge; 1920px
+        tr.odd
+          td align-xl
+          td <pre>width</pre> &ge; 1920px
+
+    .example.layout.row.wrap.spacing-1
+      .flex-4.layout.column.justify-content-center.spacing-1
+        .item.flex.layout.row.justify-content-space-around.spacing-1
+          .item: .box
+          .item: .box
+          .item: .box
+        .flex: .box
+        .flex: .box
+      .flex-6.layout.column.justify-content-space-around.spacing-1
+        .item.flex-7: .box
+        .item.flex: .box
+      .flex-2.item.layout.row.wrap.justify-content-end.spacing-1
+        .flex-1.item: .box
+        .flex-2.item: .box
+        .flex-7.item: .box
+        .flex-2.item: .box
+
     .code.row
       pre(contenteditable="true").
-        &lt;div class="layout-row layout-wrap"&gt;
-          &lt;div class="flex-40 layout-column layout-align-center"&gt;
-            &lt;div class="flex layout-row layout-align-space-around-center"&gt;
+        &lt;div class="layout row wrap"&gt;
+          &lt;div class="flex-4 layout column justify-content-center"&gt;
+            &lt;div class="flex layout row justify-content-space-around"&gt;
               &lt;div class="box"&gt;&lt;/div&gt;
               &lt;div class="box"&gt;&lt;/div&gt;
               &lt;div class="box"&gt;&lt;/div&gt;
@@ -76,14 +76,14 @@ section.alignment
             &lt;div class="flex box"&gt;&lt;/div&gt;
             &lt;div class="flex box"&gt;&lt;/div&gt;
           &lt;/div&gt;
-          &lt;div class="flex-20 layout-column layout-align-space-around-stretch"&gt;
-            &lt;div class="flex-30 box"&gt;&lt;/div&gt;
-            &lt;div class="flex-30 box"&gt;&lt;/div&gt;
+          &lt;div class="flex-8 layout column justify-content-space-around"&gt;
+            &lt;div class="flex-3 box"&gt;&lt;/div&gt;
+            &lt;div class="flex-3 box"&gt;&lt;/div&gt;
           &lt;/div&gt;
-          &lt;div class="flex-40 layout-row layout-wrap layout-align-end"&gt;
-            &lt;div class="flex-30 box"&gt;&lt;/div&gt;
-            &lt;div class="flex-30 box"&gt;&lt;/div&gt;
-            &lt;div class="flex-70 box"&gt;&lt;/div&gt;
-            &lt;div class="flex-30 box"&gt;&lt;/div&gt;
+          &lt;div class="flex-2 layout row wrap justify-content-end"&gt;
+            &lt;div class="flex-1 box"&gt;&lt;/div&gt;
+            &lt;div class="flex-2 box"&gt;&lt;/div&gt;
+            &lt;div class="flex-7 box"&gt;&lt;/div&gt;
+            &lt;div class="flex-2 box"&gt;&lt;/div&gt;
           &lt;/div&gt;
         &lt;/div&gt;

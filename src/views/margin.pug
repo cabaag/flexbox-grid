@@ -1,11 +1,20 @@
 section#margin
-  .container
-    .header
-      .title.bold Margin
-      .subtitle.
-        The <code>.layout-margin</code> class add margin to the layout 
-        as well as all the flex children.
-    .example.layout-row.layout-wrap.layout-margin
-      .flex-30: .box .flex-30
-      .flex-45: .box .flex-45
-      .flex-25: .box .flex-25
+   .container
+      .header
+         .title.bold Margin
+         .subtitle.
+            The <code>.m{a,t,r,b,l}-{1-5}</code> class add padding to elements.
+
+      .example.layout.row.wrap.p2.spacing-1
+         .box.ma-1 .ma-1
+         .box.ma-2 .ma-2
+         .box.ma-3 .ma-3
+         .box.ma-4 .ma-4
+         .box.ma-5 .ma-5
+      .header
+         .title.bold Margin axis
+         .subtitle.
+            The <code>.m{x,y}-{1-5}</code> class add padding to elements.
+      .example.layout.row.wrap.p2.spacing-1
+         .box.my-5 .my-5
+         .box.mx-5 .mx-5

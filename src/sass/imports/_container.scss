@@ -8,30 +8,30 @@ $xl-container: 65%;
 
 .container-fluid,
 .container {
-  margin-right: auto;
-  margin-left: auto;
-  @media #{$sm-screen-and-up} {
-    padding: 0 8px;
-  }
+   margin-right: auto;
+   margin-left: auto;
+   @media #{$sm-screen-and-up} {
+      padding: 0 8px;
+   }
 }
 
 .container {
-  width: $xs-container;
-  @media #{$xs-screen-and-up} {
-    width: $sm-container;
-  }
-  @media #{$sm-screen-and-up} {
-    width: $md-container;
-  }
-  @media #{$md-screen-and-up} {
-    width: $lg-container;
-  }
-  @media #{$lg-screen-and-up} {
-    width: $xl-container;
-  }
+   width: $xs-container;
+   @media #{$xs-screen-and-up} {
+      width: $sm-container;
+   }
+   @media #{$sm-screen-and-up} {
+      width: $md-container;
+   }
+   @media #{$md-screen-and-up} {
+      width: $lg-container;
+   }
+   @media #{$lg-screen-and-up} {
+      width: $xl-container;
+   }
 }
 
 .container-fluid {
-  padding-right: 1rem;
-  padding-left: 1rem;
+   padding-right: 1rem;
+   padding-left: 1rem;
 }

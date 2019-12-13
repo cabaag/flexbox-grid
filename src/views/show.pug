@@ -1,79 +1,79 @@
 section#show
-  .container
-    .header
-      .title.bold Show &amp; Hide 
-      .subtitle.
-        The layout comes with responsive hide and show attributes.
-        Indepently there is the class <code>.show-*</code> that provides
-        to not layout elements show and hide.
-    .table-responsive: table
-        thead
-          tr
-            th
-              .title Class
-            th
-              .title Breakpoint
-        tbody
-          tr.even
-            td layout, show
-            td Always visible
-          tr.odd
-            td layout-xs, show-xs
-            td Shows only when <pre>width</pre> &lt; 600px, hidden otherwise
-          tr.even
-            td layout-gt-xs, show-gt-xs
-            td Shows only when <pre>width</pre> &ge; 600px, hidden otherwise
-          tr.odd
-            td layout-sm, show-sm
-            td Shows only when 600px &le; <pre>width</pre> &lt; 960px, hidden otherwise
-          tr.even
-            td layout-gt-sm, show-gt-sm
-            td Shows only when <pre>width</pre> &ge; 960px, hidden otherwise
-          tr.odd
-            td layout-md, show-md
-            td Shows only when 960px &le; <pre>width</pre> &lt; 1280px, hidden otherwise
-          tr.even
-            td layout-gt-md, show-gt-md
-            td Shows only when <pre>width</pre> &ge; 1280px, hidden otherwise
-          tr.odd
-            td layout-lg, show-lg
-            td Shows only when 1280px &le; <pre>width</pre> &lt; 1920px, hidden otherwise
-          tr.even
-            td layout-gt-lg, show-gt-lg
-            td Shows only when <pre>width</pre> &ge; 1920px, hidden otherwise
-          tr.odd
-            td layout-xl, , show-xl
-            td Shows only when <pre>width</pre> &ge; 1920px, hidden otherwise
+   .container
+      .header
+         .title.bold Show &amp; Hide 
+         .subtitle.
+            The layout comes with responsive hide and show attributes.
+            Indepently there is the class <code>.show-*</code> that provides
+            to not layout elements show and hide.
+      .table-responsive: table
+         thead
+            tr
+               th
+                  .title Class
+               th
+                  .title Breakpoint
+         tbody
+            tr.even
+               td show
+               td Always visible
+            tr.odd
+               td show-xs
+               td Shows only when <pre>width</pre> &lt; 600px, hidden otherwise
+            tr.even
+               td show-gt-xs
+               td Shows only when <pre>width</pre> &ge; 600px, hidden otherwise
+            tr.odd
+               td show-sm
+               td Shows only when 600px &le; <pre>width</pre> &lt; 960px, hidden otherwise
+            tr.even
+               td show-gt-sm
+               td Shows only when <pre>width</pre> &ge; 960px, hidden otherwise
+            tr.odd
+               td show-md
+               td Shows only when 960px &le; <pre>width</pre> &lt; 1280px, hidden otherwise
+            tr.even
+               td show-gt-md
+               td Shows only when <pre>width</pre> &ge; 1280px, hidden otherwise
+            tr.odd
+               td show-lg
+               td Shows only when 1280px &le; <pre>width</pre> &lt; 1920px, hidden otherwise
+            tr.even
+               td show-gt-lg
+               td Shows only when <pre>width</pre> &ge; 1920px, hidden otherwise
+            tr.odd
+               td show-xl
+               td Shows only when <pre>width</pre> &ge; 1920px, hidden otherwise
 
-    .example.layout-gt-xs-row.layout-wrap
-      .flex.show-gt-md: .box .show-gt-md
-      .flex.show-sm: .box .show-sm
-      .flex: .box Only visible when width &ge; 600px
-    
-    .example.layout-xs-row.layout-wrap
-      .flex-60: .box Only visible when
-      .flex: .box width &lt; 600px
+      .example.layout.row-gt-xs.wrap.spacing-1
+         .flex.show-gt-md: .box .show-gt-md
+         .flex.show-sm: .box .show-sm
+         .flex: .box Only visible when width &ge; 600px
 
-    .code
-        pre(contenteditable="true").
-          &lt;div class="example layout-gt-xs-row layout-wrap"&gt;
-            &lt;div class="flex show-gt-md"&gt;
-              &lt;div class="box"&gt;.show-gt-md&lt;/div&gt;
+      .example.layout.row-xs.wrap.spacing-1
+         .flex-60: .box Only visible when
+         .flex: .box width &lt; 600px
+
+      .code
+         pre(contenteditable="true").
+            &lt;div class="example layout row-gt-xs wrap spacing-1"&gt;
+               &lt;div class="flex show-gt-md"&gt;
+                  &lt;div class="box"&gt;.show-gt-md&lt;/div&gt;
+               &lt;/div&gt;
+               &lt;div class="flex show-sm"&gt;
+                  &lt;div class="box"&gt;.show-sm&lt;/div&gt;
+               &lt;/div&gt;
+               &lt;div class="flex"&gt;
+                  &lt;div class="box"&gt;Only visible when width &gt;= 600px&lt;/div&gt;
+               &lt;/div&gt;
             &lt;/div&gt;
-            &lt;div class="flex show-sm"&gt;
-              &lt;div class="box"&gt;.show-sm&lt;/div&gt;
+            &lt;div class="example layout row-xs wrap spacing-1"&gt;
+               &lt;div class="flex-60"&gt;
+                  &lt;div class="box"&gt;Only visible when&lt;/div&gt;
+               &lt;/div&gt;
+               &lt;div class="flex"&gt;
+                  &lt;div class="box"&gt;width
+                     &lt; 600px&lt;/div&gt;
+                  &lt;/div&gt;
+               &lt;/div&gt;
             &lt;/div&gt;
-            &lt;div class="flex"&gt;
-              &lt;div class="box"&gt;Only visible when width &gt;= 600px&lt;/div&gt;
-            &lt;/div&gt;
-          &lt;/div&gt;
-          &lt;div class="example layout-xs-row layout-wrap"&gt;
-            &lt;div class="flex-60"&gt;
-              &lt;div class="box"&gt;Only visible when&lt;/div&gt;
-            &lt;/div&gt;
-            &lt;div class="flex"&gt;
-              &lt;div class="box"&gt;width
-                &lt; 600px&lt;/div&gt;
-              &lt;/div&gt;
-            &lt;/div&gt;
-          &lt;/div&gt;

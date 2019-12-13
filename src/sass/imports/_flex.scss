@@ -1,140 +1,75 @@
-@import 'queries';
-$sizes: (
-  default: null,
-  xs: $xs-screen, 
-  gt-xs: $xs-screen-and-up, 
-  sm: $sm-screen, 
-  gt-sm: $sm-screen-and-up, 
-  md: $md-screen, 
-  gt-md: $md-screen-and-up, 
-  lg: $lg-screen, 
-  gt-lg: $lg-screen-and-up, 
-  xl: $xl-screen
-);
+@import '_sizes';
 
 $flex: (
-  grow: 1 1 100%,
-  initial: 0 1 auto,
-  auto: 1 1 auto,
-  none: 0 0 auto,
-  noshrink: 1 0 auto,
-  nogrow: 0 1 auto,
-  0: 1 1 0%
+   grow: 1 1 100%,
+   initial: 0 1 auto,
+   auto: 1 1 auto,
+   none: 0 0 auto,
+   noshrink: 1 0 auto,
+   nogrow: 0 1 auto,
+   0: 1 1 0%,
 );
 
 .flex {
-  flex: 1;
-  box-sizing: border-box;
+   flex: 1;
+   box-sizing: border-box;
+}
+.layout.row > .flex {
+   min-width: 0;
+}
+.layout.column > .flex {
+   min-height: 0;
 }
 
 @each $name, $value in $flex {
-  .flex-#{$name} {
-    flex: $value;
-    box-sizing: border-box;
-    @if($name == 0) {
-      max-width: 0;
-      max-height: 100%;
-    }
-  }
+   .flex-#{$name} {
+      flex: $value;
+      box-sizing: border-box;
+      @if ($name == 0) {
+         max-width: 0;
+         max-height: 100%;
+      }
+   }
 }
 
-@mixin set-size($size, $flex-size, $size-name: null) {
-  .layout-column>.flex-#{$size-name}-#{$flex-size} {
-    max-width: 100%;
-    max-height: $size;
-  }
-  .flex-#{$size-name}-#{$flex-size},
-  .layout-row>.flex-#{$size-name}-#{$flex-size} {
-    max-width: $size;
-    max-height: 100%;
-  }
-  .flex-#{$size-name}-#{$flex-size},
-  .layout-column>.flex-#{$size-name}-#{$flex-size},
-  .layout-row>.flex-#{$size-name}-#{$flex-size} {
-    flex: 1 1 $size;
-    box-sizing: border-box;
-  }
-  
-  .layout-#{$size-name}-column>.flex-#{$flex-size} {
-    max-width: 100%;
-    max-height: $size;
-  }
-  .layout-#{$size-name}-row>.flex-#{$flex-size} {
-    max-width: $size;
-    max-height: 100%;
-  }
-  .flex-#{$size-name}-#{$flex-size},
-  .layout-#{$size-name}-column>.flex-#{$flex-size},
-  .layout-#{$size-name}-row>.flex-#{$flex-size} {
-    flex: 1 1 $size;
-    box-sizing: border-box;
-  }
-
-  .layout-#{$size-name}-column>.flex-#{$size-name}-#{$flex-size} {
-    max-width: 100%;
-    max-height: $size;
-  }
-  .layout-#{$size-name}-row>.flex-#{$size-name}-#{$flex-size} {
-    max-width: $size;
-    max-height: 100%;
-  }
-  .flex-#{$size-name}-#{$flex-size},
-  .layout-#{$size-name}-column>.flex-#{$size-name}-#{$flex-size},
-  .layout-#{$size-name}-row>.flex-#{$size-name}-#{$flex-size} {
-    flex: 1 1 $size;
-    box-sizing: border-box;
-  }
+@mixin set-size($size, $gridSize, $breakpoint: null) {
+   .column > .flex-#{$breakpoint}-#{$gridSize},
+   .row > .flex-#{$breakpoint}-#{$gridSize} {
+      flex: 1 1 $size;
+      box-sizing: border-box;
+   }
+   .column > .flex-#{$breakpoint}-#{$gridSize} {
+      max-height: $size;
+   }
+   .row > .flex-#{$breakpoint}-#{$gridSize} {
+      max-width: $size;
+   }
 }
 
-@mixin set-size-default($size, $flex-size) {
-  .layout-column>.flex-#{$flex-size} {
-    max-width: 100%;
-    max-height: $size;
-  }
-  .flex-#{$flex-size},
-  .layout-row>.flex-#{$flex-size} {
-    max-width: $size;
-    max-height: 100%;
-  }
-  .layout-column>.flex-#{$flex-size},
-  .layout-row>.flex-#{$flex-size} {
-    flex: 1 1 $size;
-    box-sizing: border-box;
-  }
+@mixin set-size-default($size, $gridSize) {
+   .column > .flex-#{$gridSize},
+   .row > .flex-#{$gridSize} {
+      flex: 1 1 $size;
+      box-sizing: border-box;
+   }
+   .column > .flex-#{$gridSize} {
+      max-height: $size;
+   }
+   .row > .flex-#{$gridSize} {
+      max-width: $size;
+   }
 }
 
-@each $size-name, $size-value in $sizes {
-  @if($size-value != null){
-    @media #{$size-value}{
-      @for $i from 0 through 100 {
-        @if($i % 5==0) {
-          @include set-size((percentage($i) / 100), $i, $size-name);
-        }
-        @if($i % 33==0) {
-          @include set-size(33.333335%, $i, $size-name);
-        }
-        @if($i % 66==0) {
-          @include set-size(66.666665%, $i, $size-name);
-        }
+@each $breakpoint, $query in $sizes {
+   @if ($breakpoint == default) {
+      @for $i from 0 through 12 {
+         @include set-size-default((percentage($i) / 12), $i);
       }
-    }
-  }@else {
-    @for $i from 0 through 100 {
-      @if($i % 5==0) {
-        @include set-size-default((percentage($i) / 100), $i);        
+   } @else {
+      @media #{$query} {
+         @for $i from 0 through 12 {
+            @include set-size((percentage($i) / 12), $i, $breakpoint);
+         }
       }
-      @if($i % 33==0) {
-        @include set-size-default(33.333335%, $i);
-      }
-      @if($i % 66==0) {
-        @include set-size-default(66.666665%, $i);
-      }
-    }
-    .layout-row> .flex {
-      min-width: 0;
-    }
-    .layout-column> .flex {
-      min-height: 0;
-    }
-  }
+   }
 }

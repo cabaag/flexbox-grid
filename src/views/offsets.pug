@@ -1,63 +1,62 @@
 section.offsets
   .container
     .header
-      .title.bold Flex offsets
+      .title.bold Offsets
       .subtitle.
-        Add the class <code>.flex-offset</code> to a layout's child element 
+        Add the class <code>.offset</code> to a layout's child element 
         to set its offset percentage within the layout container.
-        Value must be multiples of 5, 33 or 66.
+        Value must be multiples of 1, 3 or 9.
 
-    .example.layout-row
-      .flex.flex-offset-25: .box .flex.flex-offset-25
-      .flex-40.flex-order--1: .box .flex-40.flex-order--1
-    
+    .example.layout.row.spacing-1
+      .flex.offset-3: .box .flex.offset-3
+      .flex-4.order--1: .box .flex-4.order--1
+
     .code.row
-        pre(contenteditable="true").
-          &lt;div class='layout-row'&gt;
-            &lt;div class='flex flex-offset-25'&gt;
-              &lt;div class='box'&gt;.flex.flex-offset-25&lt;/div&gt;
-            &lt;/div&gt;
-            &lt;div class='flex-40 flex-order--1'&gt;
-              &lt;div class='box'&gt;.flex-40.flex-order--1&lt;/div&gt;
-            &lt;/div&gt;
+      pre(contenteditable="true").
+        &lt;div class='layout row spacing-1'&gt;
+          &lt;div class='flex offset-3'&gt;
+            &lt;div class='box'&gt;.flex.offset-3&lt;/div&gt;
           &lt;/div&gt;
-          
+          &lt;div class='flex-4 order--1'&gt;
+            &lt;div class='box'&gt;.flex-4.order--1&lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+
     .table-responsive: table
-        thead
-          tr
-            th
-              .title Offset
-            th
-              .title Breakpoint
-        tbody
-          tr.even
-            td flex-offset
-            td Default flex-offset can be override by other
-          tr.odd
-            td flex-offset-xs
-            td <pre>width</pre> &lt; 600px
-          tr.even
-            td flex-offset-gt-xs
-            td <pre>width</pre> &ge; 600px
-          tr.odd
-            td flex-offset-sm
-            td 600px &le; <pre>width</pre> &lt; 960px 
-          tr.even
-            td flex-offset-gt-sm
-            td <pre>width</pre> &ge; 960px
-          tr.odd
-            td flex-offset-md
-            td 960px &le; <pre>width</pre> &lt; 1280px
-          tr.even
-            td flex-offset-gt-md
-            td <pre>width</pre> &ge; 1280px
-          tr.odd
-            td flex-offset-lg
-            td 1280px &le; <pre>width</pre> &lt; 1920px
-          tr.even
-            td flex-offset-gt-lg
-            td <pre>width</pre> &ge; 1920px
-          tr.odd
-            td flex-offset-xl
-            td <pre>width</pre> &ge; 1920px
-    
+      thead
+        tr
+          th
+            .title Offset
+          th
+            .title Breakpoint
+      tbody
+        tr.even
+          td offset
+          td Default offset can be override by other
+        tr.odd
+          td offset-xs
+          td <pre>width</pre> &lt; 600px
+        tr.even
+          td offset-gt-xs
+          td <pre>width</pre> &ge; 600px
+        tr.odd
+          td offset-sm
+          td 600px &le; <pre>width</pre> &lt; 960px 
+        tr.even
+          td offset-gt-sm
+          td <pre>width</pre> &ge; 960px
+        tr.odd
+          td offset-md
+          td 960px &le; <pre>width</pre> &lt; 1280px
+        tr.even
+          td offset-gt-md
+          td <pre>width</pre> &ge; 1280px
+        tr.odd
+          td offset-lg
+          td 1280px &le; <pre>width</pre> &lt; 1920px
+        tr.even
+          td offset-gt-lg
+          td <pre>width</pre> &ge; 1920px
+        tr.odd
+          td offset-xl
+          td <pre>width</pre> &ge; 1920px

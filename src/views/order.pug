@@ -1,69 +1,69 @@
 section.order
   .container
     .header
-      .title.bold Flex ordering
+      .title.bold Ordering
       .subtitle.
-        Add the class <code>.flex-order</code> to reorder elements within
+        Add the class <code>.order</code> to reorder elements within
         layout container. The values goes from -20 to 20.
-    
+
     .table-responsive: table
-        thead
-          tr
-            th
-              .title Order
-            th
-              .title Breakpoint
-        tbody
-          tr.even
-            td flex-order
-            td Default flex-order can be override by other
-          tr.odd
-            td flex-order-xs
-            td <pre>width</pre> &lt; 600px
-          tr.even
-            td flex-order-gt-xs
-            td <pre>width</pre> &ge; 600px
-          tr.odd
-            td flex-order-sm
-            td 600px &le; <pre>width</pre> &lt; 960px 
-          tr.even
-            td flex-order-gt-sm
-            td <pre>width</pre> &ge; 960px
-          tr.odd
-            td flex-order-md
-            td 960px &le; <pre>width</pre> &lt; 1280px
-          tr.even
-            td flex-order-gt-md
-            td <pre>width</pre> &ge; 1280px
-          tr.odd
-            td flex-order-lg
-            td 1280px &le; <pre>width</pre> &lt; 1920px
-          tr.even
-            td flex-order-gt-lg
-            td <pre>width</pre> &ge; 1920px
-          tr.odd
-            td flex-order-xl
-            td <pre>width</pre> &ge; 1920px
-            
-    .example.layout-row
-      .flex.flex-order--1: .box .flex-order--1
-      .flex.flex-order-4: .box .flex-order-4
-      .flex.flex-order-1: .box .flex-order-1
-      .flex.flex-order--3: .box .flex-order--3
-    
+      thead
+        tr
+          th
+            .title Order
+          th
+            .title Breakpoint
+      tbody
+        tr.even
+          td order
+          td Default order can be override by other
+        tr.odd
+          td order-xs
+          td <pre>width</pre> &lt; 600px
+        tr.even
+          td order-gt-xs
+          td <pre>width</pre> &ge; 600px
+        tr.odd
+          td order-sm
+          td 600px &le; <pre>width</pre> &lt; 960px 
+        tr.even
+          td order-gt-sm
+          td <pre>width</pre> &ge; 960px
+        tr.odd
+          td order-md
+          td 960px &le; <pre>width</pre> &lt; 1280px
+        tr.even
+          td order-gt-md
+          td <pre>width</pre> &ge; 1280px
+        tr.odd
+          td order-lg
+          td 1280px &le; <pre>width</pre> &lt; 1920px
+        tr.even
+          td order-gt-lg
+          td <pre>width</pre> &ge; 1920px
+        tr.odd
+          td order-xl
+          td <pre>width</pre> &ge; 1920px
+
+    .example.layout.row.spacing-1
+      .flex.order--1: .box .order--1
+      .flex.order--4: .box .order--4
+      .flex.order-1: .box .order-1
+      .flex.order--3: .box .order--3
+
     .code.row
-        pre(contenteditable="true").
-          &lt;div class='layout-row'&gt;
-            &lt;div class='flex flex-order--1'&gt;
-              &lt;div class='box'&gt;.flex-order--1&lt;/div&gt;
-            &lt;/div&gt;
-            &lt;div class='flex flex-order-4'&gt;
-              &lt;div class='box'&gt;.flex-order-4&lt;/div&gt;
-            &lt;/div&gt;
-            &lt;div class='flex flex-order-1'&gt;
-              &lt;div class='box'&gt;.flex-order-1&lt;/div&gt;
-            &lt;/div&gt;
-            &lt;div class='flex flex-order--3'&gt;
-              &lt;div class='box'&gt;.flex-order--3&lt;/div&gt;
-            &lt;/div&gt;
+      pre(contenteditable="true").
+        &lt;div class='layout row spacing-1'&gt;
+          &lt;div class='flex order--1'&gt;
+            &lt;div class='box'&gt;.order--1&lt;/div&gt;
           &lt;/div&gt;
+          &lt;div class='flex order--4'&gt;
+            &lt;div class='box'&gt;.order--4&lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class='flex order-1'&gt;
+            &lt;div class='box'&gt;.order-1&lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class='flex order--3'&gt;
+            &lt;div class='box'&gt;.order--3&lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
