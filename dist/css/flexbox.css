@@ -1654,24 +1654,19 @@
           justify-content: space-evenly; }
 
 .justify-items-baseline {
-  -webkit-box-pack: baseline;
-          justify-content: baseline; }
+  justify-items: baseline; }
 
 .justify-items-stretch {
-  -webkit-box-pack: stretch;
-          justify-content: stretch; }
+  justify-items: stretch; }
 
 .justify-items-start {
-  -webkit-box-pack: start;
-          justify-content: flex-start; }
+  justify-items: flex-start; }
 
 .justify-items-end {
-  -webkit-box-pack: end;
-          justify-content: flex-end; }
+  justify-items: flex-end; }
 
 .justify-items-center {
-  -webkit-box-pack: center;
-          justify-content: center; }
+  justify-items: center; }
 
 .align-items-baseline {
   -webkit-box-align: baseline;
